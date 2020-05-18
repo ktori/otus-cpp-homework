@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - 'homework/doxygen/**'
+      - '.github/**'
+      - 'CMakeLists.txt'
 
 jobs:
   main:
@@ -22,7 +24,7 @@ jobs:
       - uses: mattnotmitt/doxygen-action@v1
         with:
           working-directory: 'homework/doxygen'
-          doxyfile-path: 'homework/doxygen/Doxygen'
+          doxyfile-path: 'Doxygen'
       - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
