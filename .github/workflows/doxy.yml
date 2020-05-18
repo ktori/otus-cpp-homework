@@ -18,8 +18,6 @@ jobs:
         working-directory: homework/doxygen
       - run: make
         working-directory: homework/doxygen
-      - run: make test
-        working-directory: homework/doxygen
       - run: mkdir -p homework/doxygen/docs/04-doxygen
       - uses: mattnotmitt/doxygen-action@v1
         with:
