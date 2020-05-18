@@ -1,0 +1,1 @@
+target_sources(print-ip PRIVATE main.cpp)
