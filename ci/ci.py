@@ -5,7 +5,7 @@ import sys
 import tempfile
 from distutils.dir_util import copy_tree
 
-from . import event_payload, projects_root, log_info, username, access_token, repository
+from . import event_payload, projects_root, log_info, username, access_token, repository, sha
 from .actions import LogGroup
 from .project import Project
 from .release import Release
