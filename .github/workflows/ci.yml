@@ -8,6 +8,7 @@ on:
       - 'homework/**'
       - '.github/**'
       - 'CMakeLists.txt'
+      - 'ci/**'
 
 jobs:
   main:
