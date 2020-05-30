@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['index_5ftype',['index_type',['../structmatrix.html#aa800607a99454f7d958b4d6565ca9751',1,'matrix']]],
-  ['iterator_5fvalue_5ftype',['iterator_value_type',['../structmatrix.html#a54b3613a5cf2df7a45556b017ebe306f',1,'matrix']]]
+  ['index_5ftype',['index_type',['../structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06',1,'matrix::matrix']]],
+  ['iterator_5fvalue_5ftype',['iterator_value_type',['../structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65',1,'matrix::matrix']]]
 ];

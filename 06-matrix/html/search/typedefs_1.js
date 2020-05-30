@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key_5ftype',['key_type',['../structmatrix.html#ae7906bda02f5d7f6744d9545c9465e13',1,'matrix']]]
+  ['key_5ftype',['key_type',['../structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e',1,'matrix::matrix']]]
 ];

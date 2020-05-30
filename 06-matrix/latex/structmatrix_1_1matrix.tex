@@ -1,0 +1,197 @@
+\hypertarget{structmatrix_1_1matrix}{}\section{matrix\+:\+:matrix$<$ T, Default, N $>$ Struct Template Reference}
+\label{structmatrix_1_1matrix}\index{matrix\+::matrix$<$ T, Default, N $>$@{matrix\+::matrix$<$ T, Default, N $>$}}
+
+
+{\ttfamily \#include $<$matrix.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmatrix_1_1matrix_1_1equality}{equality}
+\item 
+struct \hyperlink{structmatrix_1_1matrix_1_1hash}{hash}
+\item 
+struct \hyperlink{structmatrix_1_1matrix_1_1iterator}{iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type} = T
+\item 
+using \hyperlink{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}{size\+\_\+type} = size\+\_\+t
+\item 
+using \hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type} = size\+\_\+t
+\item 
+using \hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type} = typename \hyperlink{classmatrix_1_1detail_1_1generate__matrix__key__type}{detail\+::generate\+\_\+matrix\+\_\+key\+\_\+type}$<$ \hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension} $>$\+::type
+\item 
+using \hyperlink{structmatrix_1_1matrix_a1de5c69f5d9e3b6d3e54b1e4cb433d65}{iterator\+\_\+value\+\_\+type} = typename \hyperlink{classmatrix_1_1detail_1_1generate__matrix__iterator__value__type}{detail\+::generate\+\_\+matrix\+\_\+iterator\+\_\+value\+\_\+type}$<$ \hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension} $>$\+::type
+\item 
+using \hyperlink{structmatrix_1_1matrix_a435a771dfb8b36e4cbc5ec09cf391796}{map\+\_\+type} = typename std\+::unordered\+\_\+map$<$ \hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_1_1hash}{hash}, \hyperlink{structmatrix_1_1matrix_1_1equality}{equality} $>$
+\item 
+using \hyperlink{structmatrix_1_1matrix_a718c745a811e13b64ba21239288666a6}{map\+\_\+iterator\+\_\+type} = typename map\+\_\+type\+::iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}{size\+\_\+type} \hyperlink{structmatrix_1_1matrix_a56f1554d0f871ac5e2b3dac89d26113e}{size} () const
+\item 
+\hyperlink{structmatrix_1_1detail_1_1indexer}{detail\+::indexer}$<$ \hyperlink{structmatrix_1_1matrix}{matrix}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension}, \hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension} -\/ 1 $>$ \hyperlink{structmatrix_1_1matrix_a06d5b697d7f64430305967f4adc80633}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type} i)
+\item 
+\hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type} \hyperlink{structmatrix_1_1matrix_a312aeb3131a45703593dd29558dc54da}{get} (\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type} key) const
+\item 
+void \hyperlink{structmatrix_1_1matrix_aec0384fc656feed77a2c71c2ed0065d8}{set} (\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type} key, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type} value)
+\item 
+void \hyperlink{structmatrix_1_1matrix_ac15f926245fe20e9dfee3f0695299550}{remove} (\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type} key)
+\item 
+\hyperlink{structmatrix_1_1matrix_1_1iterator}{iterator} \hyperlink{structmatrix_1_1matrix_a3b7a440d3593bf1bcd0719fa76128064}{begin} ()
+\item 
+\hyperlink{structmatrix_1_1matrix_1_1iterator}{iterator} \hyperlink{structmatrix_1_1matrix_a8cf9448267d3ebbe15bb606b68440952}{end} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension} = N
+\item 
+static constexpr T \hyperlink{structmatrix_1_1matrix_a4c0193b1fdd949b71f717232cd2c7ce1}{default\+\_\+value} = Default
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, T Default, size\+\_\+t N = 2$>$\newline
+struct matrix\+::matrix$<$ T, Default, N $>$}
+
+N-\/dimensional sparse matrix class 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type to be stored in the matrix \\
+\hline
+{\em Default} & default value to be used if element was not inserted \\
+\hline
+{\em N} & number of dimensions \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}\label{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!index\+\_\+type@{index\+\_\+type}}
+\index{index\+\_\+type@{index\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{index\+\_\+type}{index\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type} =  size\+\_\+t}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a1de5c69f5d9e3b6d3e54b1e4cb433d65}\label{structmatrix_1_1matrix_a1de5c69f5d9e3b6d3e54b1e4cb433d65}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!iterator\+\_\+value\+\_\+type@{iterator\+\_\+value\+\_\+type}}
+\index{iterator\+\_\+value\+\_\+type@{iterator\+\_\+value\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{iterator\+\_\+value\+\_\+type}{iterator\_value\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_a1de5c69f5d9e3b6d3e54b1e4cb433d65}{iterator\+\_\+value\+\_\+type} =  typename \hyperlink{classmatrix_1_1detail_1_1generate__matrix__iterator__value__type}{detail\+::generate\+\_\+matrix\+\_\+iterator\+\_\+value\+\_\+type}$<$\hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension}$>$\+::type}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}\label{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!key\+\_\+type@{key\+\_\+type}}
+\index{key\+\_\+type@{key\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{key\+\_\+type}{key\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type} =  typename \hyperlink{classmatrix_1_1detail_1_1generate__matrix__key__type}{detail\+::generate\+\_\+matrix\+\_\+key\+\_\+type}$<$\hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension}$>$\+::type}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a718c745a811e13b64ba21239288666a6}\label{structmatrix_1_1matrix_a718c745a811e13b64ba21239288666a6}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!map\+\_\+iterator\+\_\+type@{map\+\_\+iterator\+\_\+type}}
+\index{map\+\_\+iterator\+\_\+type@{map\+\_\+iterator\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{map\+\_\+iterator\+\_\+type}{map\_iterator\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_a718c745a811e13b64ba21239288666a6}{map\+\_\+iterator\+\_\+type} =  typename map\+\_\+type\+::iterator}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a435a771dfb8b36e4cbc5ec09cf391796}\label{structmatrix_1_1matrix_a435a771dfb8b36e4cbc5ec09cf391796}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!map\+\_\+type@{map\+\_\+type}}
+\index{map\+\_\+type@{map\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{map\+\_\+type}{map\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_a435a771dfb8b36e4cbc5ec09cf391796}{map\+\_\+type} =  typename std\+::unordered\+\_\+map$<$\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_1_1hash}{hash}, \hyperlink{structmatrix_1_1matrix_1_1equality}{equality}$>$}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}\label{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}{size\+\_\+type} =  size\+\_\+t}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}\label{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+using \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::\hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type} =  T}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structmatrix_1_1matrix_a3b7a440d3593bf1bcd0719fa76128064}\label{structmatrix_1_1matrix_a3b7a440d3593bf1bcd0719fa76128064}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!begin@{begin}}
+\index{begin@{begin}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+\hyperlink{structmatrix_1_1matrix_1_1iterator}{iterator} \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a8cf9448267d3ebbe15bb606b68440952}\label{structmatrix_1_1matrix_a8cf9448267d3ebbe15bb606b68440952}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!end@{end}}
+\index{end@{end}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+\hyperlink{structmatrix_1_1matrix_1_1iterator}{iterator} \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a312aeb3131a45703593dd29558dc54da}\label{structmatrix_1_1matrix_a312aeb3131a45703593dd29558dc54da}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!get@{get}}
+\index{get@{get}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+\hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type} \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a06d5b697d7f64430305967f4adc80633}\label{structmatrix_1_1matrix_a06d5b697d7f64430305967f4adc80633}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+\hyperlink{structmatrix_1_1detail_1_1indexer}{detail\+::indexer}$<$\hyperlink{structmatrix_1_1matrix}{matrix}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension}, \hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}, \hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}, \hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}, \hyperlink{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}{dimension} -\/ 1$>$ \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix_1_1matrix_a87b61e7f35dcd5991cd3f243cfeced06}{index\+\_\+type}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_ac15f926245fe20e9dfee3f0695299550}\label{structmatrix_1_1matrix_ac15f926245fe20e9dfee3f0695299550}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!remove@{remove}}
+\index{remove@{remove}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+void \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::remove (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_aec0384fc656feed77a2c71c2ed0065d8}\label{structmatrix_1_1matrix_aec0384fc656feed77a2c71c2ed0065d8}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!set@{set}}
+\index{set@{set}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+void \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::set (\begin{DoxyParamCaption}\item[{\hyperlink{structmatrix_1_1matrix_af7b5498ac1b615cb9ef51bd185a2557e}{key\+\_\+type}}]{key,  }\item[{\hyperlink{structmatrix_1_1matrix_ab940e7a84942339cdee7c0f0d3bd8ef9}{value\+\_\+type}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a56f1554d0f871ac5e2b3dac89d26113e}\label{structmatrix_1_1matrix_a56f1554d0f871ac5e2b3dac89d26113e}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!size@{size}}
+\index{size@{size}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+\hyperlink{structmatrix_1_1matrix_aebc6efd587a1c3f0a951631d6ee6837f}{size\+\_\+type} \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmatrix_1_1matrix_a4c0193b1fdd949b71f717232cd2c7ce1}\label{structmatrix_1_1matrix_a4c0193b1fdd949b71f717232cd2c7ce1}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!default\+\_\+value@{default\+\_\+value}}
+\index{default\+\_\+value@{default\+\_\+value}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{default\+\_\+value}{default\_value}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+constexpr T \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::default\+\_\+value = Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}\label{structmatrix_1_1matrix_a7d76bd51fd998974f59ea4035e053f74}} 
+\index{matrix\+::matrix@{matrix\+::matrix}!dimension@{dimension}}
+\index{dimension@{dimension}!matrix\+::matrix@{matrix\+::matrix}}
+\subsubsection{\texorpdfstring{dimension}{dimension}}
+{\footnotesize\ttfamily template$<$typename T , T Default, size\+\_\+t N = 2$>$ \\
+constexpr size\+\_\+t \hyperlink{structmatrix_1_1matrix}{matrix\+::matrix}$<$ T, Default, N $>$\+::dimension = N\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{matrix_8hpp}{matrix.\+hpp}\end{DoxyCompactItemize}

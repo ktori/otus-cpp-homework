@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['size_5ftype',['size_type',['../structmatrix.html#a1a99bcb39d34cb8acd10a5d1a260542b',1,'matrix']]]
+  ['size_5ftype',['size_type',['../structmatrix_1_1matrix.html#aebc6efd587a1c3f0a951631d6ee6837f',1,'matrix::matrix']]]
 ];
