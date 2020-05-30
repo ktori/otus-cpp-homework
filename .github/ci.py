@@ -59,7 +59,7 @@ class Project:
         with open(os.path.join(self.cwd, 'CMakeCache.txt'), 'r') as cache:
             for line in cache:
                 if 'CMAKE_PROJECT_NAME:STATIC' in line:
-                    self.cmake_project_name = line[len('CMAKE_PROJECT_NAME:STATIC='):]
+                    self.cmake_project_name = line[len('CMAKE_PROJECT_NAME:STATIC='):].replace('\n', '')
                     log_info('Project name for', self.name, 'is', self.cmake_project_name)
                     break
             if self.cmake_project_name is None:
