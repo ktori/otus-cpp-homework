@@ -14,6 +14,12 @@
 namespace matrix
 {
 
+	/**
+	 * N-dimensional sparse matrix class
+	 * @tparam T type to be stored in the matrix
+	 * @tparam Default default value to be used if element was not inserted
+	 * @tparam N number of dimensions
+	 */
 	template<typename T, T Default, size_t N = 2>
 	struct matrix
 	{
@@ -23,7 +29,9 @@ namespace matrix
 		using size_type = size_t;
 		using index_type = size_t;
 		using key_type = typename detail::generate_matrix_key_type<index_type, dimension>::type;
-		using iterator_value_type = typename detail::generate_matrix_iterator_value_type<index_type, value_type, dimension>::type;
+		using iterator_value_type = typename detail::generate_matrix_iterator_value_type<index_type,
+																						 value_type,
+																						 dimension>::type;
 
 		[[nodiscard]] size_type size() const
 		{
