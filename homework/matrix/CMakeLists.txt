@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(matrix)
+project(06-matrix)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(matrix)
