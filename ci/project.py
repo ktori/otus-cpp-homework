@@ -20,7 +20,7 @@ class Project:
                 return True
             if change.startswith('ci'):
                 return True
-            if change.startswith(f'homework/project/{self.name}'):
+            if change.startswith(f'homework/{self.name}'):
                 return True
 
         return False
