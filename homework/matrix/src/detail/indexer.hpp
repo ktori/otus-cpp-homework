@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include <array>
+#include <tuple>
 
 namespace matrix::detail
 {
