@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - 'homework/doxygen/**'
-      - '.github/**'
+      - '.github/workflows/doxygen.yml'
       - 'CMakeLists.txt'
 
 jobs:

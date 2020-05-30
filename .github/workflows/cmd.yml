@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - 'homework/cmd/**'
-      - '.github/**'
+      - '.github/workflows/cmd.yml'
       - 'CMakeLists.txt'
 
 jobs:

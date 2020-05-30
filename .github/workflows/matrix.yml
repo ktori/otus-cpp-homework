@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - 'homework/matrix/**'
-      - '.github/**'
+      - '.github/workflows/matrix.yml'
       - 'CMakeLists.txt'
 
 jobs:
