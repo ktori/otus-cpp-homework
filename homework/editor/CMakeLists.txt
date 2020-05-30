@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
-project(03-allocator)
+project(editor)
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(allocator)
+add_executable(editor)
 
 add_subdirectory(src)
 

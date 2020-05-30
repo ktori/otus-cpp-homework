@@ -8,5 +8,4 @@ enable_testing()
 set(INSTALL_GMOCK OFF)
 set(INSTALL_GTEST OFF)
 
-add_subdirectory(homework/allocator)
-add_subdirectory(homework/doxygen)
+add_subdirectory(homework)

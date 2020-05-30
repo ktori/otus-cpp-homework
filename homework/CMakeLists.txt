@@ -1,0 +1,5 @@
+add_subdirectory(allocator)
+add_subdirectory(doxygen)
+add_subdirectory(editor)
+add_subdirectory(matrix)
+add_subdirectory(cmd)

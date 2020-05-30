@@ -1,0 +1,1 @@
+target_sources(matrix PRIVATE main.cpp)

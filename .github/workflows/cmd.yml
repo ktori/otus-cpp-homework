@@ -1,11 +1,11 @@
-name: '04 - Doxygen'
+name: '07 - cmd'
 
 on:
   push:
     branches:
       - master
     paths:
-      - 'homework/doxygen/**'
+      - 'homework/cmd/**'
       - '.github/**'
       - 'CMakeLists.txt'
 
@@ -17,17 +17,17 @@ jobs:
         with:
           submodules: true
       - run: cmake .
-        working-directory: homework/doxygen
+        working-directory: homework/cmd
       - run: make
-        working-directory: homework/doxygen
-      - run: mkdir -p homework/doxygen/docs/04-doxygen
+        working-directory: homework/cmd
+      - run: mkdir -p homework/cmd/docs/07-cmd
       - uses: mattnotmitt/doxygen-action@v1
         with:
-          working-directory: 'homework/doxygen'
+          working-directory: 'homework/cmd'
           doxyfile-path: 'Doxyfile'
       - name: Publish generated content to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: homework/doxygen/docs
+          FOLDER: homework/cmd/docs
