@@ -20,7 +20,7 @@ def get_changed_files():
     before = event_payload['before']
     after = event_payload['after']
 
-    return check_output(['git', '--no-pager', '--name-only', before, after]).decode(sys.getdefaultencoding()).splitlines()
+    return check_output(['git', '--no-pager', 'diff', '--name-only', before, after]).decode(sys.getdefaultencoding()).splitlines()
 
 
 def get_project_names():
