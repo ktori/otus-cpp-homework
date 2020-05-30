@@ -8,6 +8,7 @@ from distutils.dir_util import copy_tree
 from . import event_payload, projects_root, log_info, username, access_token, repository
 from .actions import LogGroup
 from .project import Project
+from .release import Release
 
 
 def get_changed_files():
@@ -54,7 +55,6 @@ def generate_and_upload_docs():
 
     if subprocess.check_output(['git', 'status', '-s']).decode(sys.getdefaultencoding()):
         with LogGroup('Uploading'):
-            sha = os.environ['GITHUB_SHA']
             log_info('Creating a commit')
             subprocess.check_call(['git', 'add', '.'])
             subprocess.check_call(['git', 'status'])
@@ -67,12 +67,23 @@ def generate_and_upload_docs():
     os.chdir(old_cwd)
 
 
+def generate_packages():
+    return [project.create_package() for project in changed_projects]
+
+
+if not changed_projects:
+    log_info('No changes in projects')
+    exit(0)
+
 with LogGroup('Building projects'):
     build_projects()
 
 with LogGroup('Generating and uploading documentation'):
     generate_and_upload_docs()
 
-# generate packages
+with LogGroup('Generating packages'):
+    generate_packages()
 
-# create and upload release
+with LogGroup('Creating and uploading a release'):
+    release = Release(changed_projects)
+    release.build_and_upload()

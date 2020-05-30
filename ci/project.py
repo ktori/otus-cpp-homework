@@ -45,7 +45,12 @@ class Project:
         pass
 
     def create_package(self) -> str:
-        pass
+        with LogGroup(f'Building package for {self.name}'):
+            subprocess.check_call(['make', 'package'])
+            for file in os.listdir(self.cwd):
+                if file.endswith('.deb'):
+                    return os.path.join(self.cwd, file)
+            raise RuntimeError('Could not locate deb package')
 
     def generate_docs(self) -> str:
         with LogGroup(f'Generating documentation {self.name}'):

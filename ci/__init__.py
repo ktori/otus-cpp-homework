@@ -8,6 +8,7 @@ event_payload = json.load(open(os.environ['GITHUB_EVENT_PATH'], 'r'))
 username = os.environ['GITHUB_ACTOR']
 repository = os.environ['GITHUB_REPOSITORY']
 access_token = os.environ['GITHUB_TOKEN']
+sha = os.environ['GITHUB_SHA']
 
 
 ANSI_RESET = u'\u001b[0m'
