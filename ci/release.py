@@ -40,4 +40,4 @@ class Release:
                 'name': name,
                 'label': label
             }, headers={**headers(), 'Content-Type': 'application/vnd.debian.binary-package'})
-            log_info('Uploaded release asset', r.json()['id'])
+            log_info('Uploaded release asset', str(r.json()['id']))
