@@ -1,1 +1,1 @@
-target_sources(matrix PRIVATE main.cpp)
+target_sources(matrix PRIVATE main.cpp matrix.hpp)
