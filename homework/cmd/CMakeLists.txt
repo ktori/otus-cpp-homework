@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.17)
 project(07-cmd VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cmd)
+add_executable(bulk)
 
-install(TARGETS cmd RUNTIME DESTINATION bin)
+install(TARGETS bulk RUNTIME DESTINATION bin)
 
 add_subdirectory(src)
 

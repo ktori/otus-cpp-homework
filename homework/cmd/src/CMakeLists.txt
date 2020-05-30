@@ -1,1 +1,1 @@
-target_sources(cmd PRIVATE main.cpp)
+target_sources(bulk PRIVATE main.cpp command_block.hpp block_reader.hpp block_reader.cpp command_block.cpp)
