@@ -49,6 +49,8 @@ class Project:
                 return True
             if change.startswith('.github'):
                 return True
+            if change.startswith('ci'):
+                return True
             if change.startswith(f'homework/project/{self.name}'):
                 return True
 
