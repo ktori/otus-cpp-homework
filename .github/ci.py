@@ -119,6 +119,9 @@ def generate_and_upload_docs():
 
     sha = os.environ['GITHUB_SHA']
     log_info('Creating a commit')
+    subprocess.check_call(['ls', '-la'])
+    subprocess.check_call(['git', 'add', '.'])
+    subprocess.check_call(['git', 'status'])
     subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
     log_info('Pushing')
     subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
