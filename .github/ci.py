@@ -7,6 +7,7 @@ import tempfile
 from distutils.dir_util import copy_tree
 from subprocess import check_output
 from typing import List
+from .actions import LogGroup
 
 root = os.environ['GITHUB_WORKSPACE']
 projects_root = os.path.join(root, 'homework')
@@ -54,20 +55,20 @@ class Project:
         return False
 
     def run_cmake(self):
-        log_info('Configuring project', self.name)
-        subprocess.check_call(['cmake', '.'], cwd=self.cwd)
-        with open(os.path.join(self.cwd, 'CMakeCache.txt'), 'r') as cache:
-            for line in cache:
-                if 'CMAKE_PROJECT_NAME:STATIC' in line:
-                    self.cmake_project_name = line[len('CMAKE_PROJECT_NAME:STATIC='):].replace('\n', '')
-                    log_info('Project name for', self.name, 'is', self.cmake_project_name)
-                    break
-            if self.cmake_project_name is None:
-                log_info('Unable to determine project name for', self.name)
+        with LogGroup(f'Configuring project {self.name}'):
+            subprocess.check_call(['cmake', '.'], cwd=self.cwd)
+            with open(os.path.join(self.cwd, 'CMakeCache.txt'), 'r') as cache:
+                for line in cache:
+                    if 'CMAKE_PROJECT_NAME:STATIC' in line:
+                        self.cmake_project_name = line[len('CMAKE_PROJECT_NAME:STATIC='):].replace('\n', '')
+                        log_info('Project name for', self.name, 'is', self.cmake_project_name)
+                        break
+                if self.cmake_project_name is None:
+                    log_info('Unable to determine project name for', self.name)
 
     def run_make(self):
-        log_info('Building project', self.name)
-        subprocess.check_call(['make'], cwd=self.cwd)
+        with LogGroup(f'Building project {self.name}'):
+            subprocess.check_call(['make'], cwd=self.cwd)
 
     def run_tests(self):
         pass
@@ -76,12 +77,13 @@ class Project:
         pass
 
     def generate_docs(self) -> str:
-        docs_out = os.path.join(self.cwd, 'docs', self.cmake_project_name)
-        log_info('Generating documentation', self.name)
-        log_info('Documentation output', docs_out)
-        os.makedirs(docs_out)
-        subprocess.check_call(['doxygen', 'Doxyfile'], cwd=self.cwd)
-        return docs_out
+        with LogGroup(f'Generating documentation {self.name}'):
+            docs_out = os.path.join(self.cwd, 'docs', self.cmake_project_name)
+            log_info('Generating documentation', self.name)
+            log_info('Documentation output', docs_out)
+            os.makedirs(docs_out)
+            subprocess.check_call(['doxygen', 'Doxyfile'], cwd=self.cwd)
+            return docs_out
 
 
 changed_files = get_changed_files()
@@ -119,20 +121,24 @@ def generate_and_upload_docs():
         shutil.rmtree(project_docs_out, ignore_errors=True)
         copy_tree(project_docs_in, project_docs_out)
 
-    sha = os.environ['GITHUB_SHA']
-    log_info('Creating a commit')
-    subprocess.check_call(['ls', '-la'])
-    subprocess.check_call(['git', 'add', '.'])
-    subprocess.check_call(['git', 'status'])
-    subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
-    log_info('Pushing')
-    subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
+    with LogGroup('Uploading'):
+        sha = os.environ['GITHUB_SHA']
+        log_info('Creating a commit')
+        subprocess.check_call(['ls', '-la'])
+        subprocess.check_call(['git', 'add', '.'])
+        subprocess.check_call(['git', 'status'])
+        subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
+        log_info('Pushing')
+        subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
 
     os.chdir(old_cwd)
 
 
-build_projects()
-generate_and_upload_docs()
+with LogGroup('Building projects'):
+    build_projects()
+
+with LogGroup('Generating and uploading documentation'):
+    generate_and_upload_docs()
 
 # generate packages
 
