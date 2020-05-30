@@ -16,6 +16,14 @@ repository = os.environ['GITHUB_REPOSITORY']
 access_token = os.environ['GITHUB_TOKEN']
 
 
+ANSI_RESET = u'\u001b[0m'
+ANSI_BRIGHT_CYAN = u'\u001b[36;1m'
+
+
+def log_info(*args):
+    print(f'{ANSI_BRIGHT_CYAN}CI:', ' '.join(args), ANSI_RESET)
+
+
 def get_changed_files():
     before = event_payload['before']
     after = event_payload['after']
@@ -44,9 +52,11 @@ class Project:
         return False
 
     def run_cmake(self):
+        log_info('Configuring project', self.name)
         subprocess.check_call(['cmake', '.'], cwd=self.cwd)
 
     def run_make(self):
+        log_info('Building project', self.name)
         subprocess.check_call(['make'], cwd=self.cwd)
 
     def run_tests(self):
@@ -57,6 +67,8 @@ class Project:
 
     def generate_docs(self) -> str:
         docs_out = os.path.join(self.cwd, 'docs', self.name)
+        log_info('Generating documentation', self.name)
+        log_info('Documentation output', docs_out)
         os.makedirs(docs_out)
         subprocess.check_call(['doxygen', 'Doxyfile'], cwd=self.cwd)
         return docs_out
@@ -69,6 +81,7 @@ changed_projects = [p for p in projects if p.should_update(changed_files)]
 
 def build_projects():
     for project in changed_projects:
+        log_info(project.name, 'has changed')
         project.run_cmake()
         project.run_make()
         project.run_tests()
@@ -79,6 +92,8 @@ def generate_and_upload_docs():
     tmp = tempfile.TemporaryDirectory()
     os.chdir(tmp.name)
 
+    log_info('Entered temporary directory', os.getcwd(), 'cloning repository now')
+
     clone_url = f'https://{username}:{access_token}@github.com/{repository}.git'
     subprocess.check_call(['git', 'clone', '--single-branch', '--branch', 'gh-pages', clone_url, '.'])
     subprocess.check_call(['git', 'config', 'user.name', username])
@@ -87,11 +102,15 @@ def generate_and_upload_docs():
     for project in changed_projects:
         project_docs_out = os.path.join(tmp.name, project.name)
         project_docs_in = project.generate_docs()
+        log_info('project_docs_out', project_docs_out)
+        log_info('project_docs_in')
         shutil.rmtree(project_docs_out, ignore_errors=True)
         copy_tree(project_docs_in, project_docs_out)
 
     sha = os.environ['GITHUB_SHA']
+    log_info('Creating a commit')
     subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
+    log_info('Pushing')
     subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
 
     os.chdir(old_cwd)
