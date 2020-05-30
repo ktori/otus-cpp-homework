@@ -1,0 +1,4 @@
+homework/**
+.idea
+cmake-build-debug
+googletest
