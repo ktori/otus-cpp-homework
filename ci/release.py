@@ -28,7 +28,7 @@ class Release:
             'target_commitish': sha,
             'name': self.name(),
             'body': f'Automatic CI build of projects'
-        }, headers=headers)
+        }, headers=headers())
         self.created_json = r.json()
         self.id = self.created_json['id']
         self.upload_url = self.created_json['upload_url'].replace('{?name,label}', '')
