@@ -56,8 +56,10 @@ class Project:
         pass
 
     def generate_docs(self) -> str:
+        docs_out = os.path.join(self.cwd, 'docs', self.name)
+        os.makedirs(docs_out)
         subprocess.check_call(['doxygen', 'Doxyfile'], cwd=self.cwd)
-        return os.path.join(self.cwd, 'docs', self.name)
+        return docs_out
 
 
 changed_files = get_changed_files()
