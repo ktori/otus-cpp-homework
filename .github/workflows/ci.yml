@@ -1,0 +1,21 @@
+name: '03 - Allocator'
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'homework/**'
+      - '.github/**'
+      - 'CMakeLists.txt'
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - run: python3 .github/ci.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
