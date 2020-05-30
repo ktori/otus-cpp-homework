@@ -22,6 +22,7 @@ ANSI_BRIGHT_CYAN = u'\u001b[36;1m'
 
 def log_info(*args):
     print(f'{ANSI_BRIGHT_CYAN}CI:', ' '.join(args), ANSI_RESET)
+    sys.stdout.flush()
 
 
 def get_changed_files():
