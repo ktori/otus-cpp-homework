@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+          fetch-depth: 0
       - run: python3 .github/ci.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
