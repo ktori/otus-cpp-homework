@@ -40,6 +40,7 @@ class Project:
     def __init__(self, name):
         self.name = name
         self.cwd = os.path.join(projects_root, name)
+        self.cmake_project_name = None
 
     def should_update(self, changes: List[str]):
         for change in changes:
@@ -55,6 +56,14 @@ class Project:
     def run_cmake(self):
         log_info('Configuring project', self.name)
         subprocess.check_call(['cmake', '.'], cwd=self.cwd)
+        with open(os.path.join(self.cwd, 'CMakeCache.txt'), 'r') as cache:
+            for line in cache:
+                if 'CMAKE_PROJECT_NAME:STATIC' in line:
+                    self.cmake_project_name = line[len('CMAKE_PROJECT_NAME:STATIC='):]
+                    log_info('Project name for', self.name, 'is', self.cmake_project_name)
+                    break
+            if self.cmake_project_name is None:
+                log_info('Unable to determine project name for', self.name)
 
     def run_make(self):
         log_info('Building project', self.name)
@@ -67,7 +76,7 @@ class Project:
         pass
 
     def generate_docs(self) -> str:
-        docs_out = os.path.join(self.cwd, 'docs', self.name)
+        docs_out = os.path.join(self.cwd, 'docs', self.cmake_project_name)
         log_info('Generating documentation', self.name)
         log_info('Documentation output', docs_out)
         os.makedirs(docs_out)
@@ -101,10 +110,10 @@ def generate_and_upload_docs():
     subprocess.check_call(['git', 'config', 'user.email', f'{username}@users.noreply.github.com'])
 
     for project in changed_projects:
-        project_docs_out = os.path.join(tmp.name, project.name)
+        project_docs_out = os.path.join(tmp.name, project.cmake_project_name)
         project_docs_in = project.generate_docs()
         log_info('project_docs_out', project_docs_out)
-        log_info('project_docs_in')
+        log_info('project_docs_in', project_docs_in)
         shutil.rmtree(project_docs_out, ignore_errors=True)
         copy_tree(project_docs_in, project_docs_out)
 
