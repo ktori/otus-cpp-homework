@@ -115,21 +115,22 @@ def generate_and_upload_docs():
         project_docs_out = os.path.join(tmp.name, project.cmake_project_name)
         project_docs_in = project.generate_docs()
         log_info('project_docs_out', project_docs_out)
-        subprocess.check_call(['ls', '-la', project_docs_out])
         log_info('project_docs_in', project_docs_in)
-        subprocess.check_call(['ls', '-la', project_docs_in])
         shutil.rmtree(project_docs_out, ignore_errors=True)
         copy_tree(project_docs_in, project_docs_out)
 
-    with LogGroup('Uploading'):
-        sha = os.environ['GITHUB_SHA']
-        log_info('Creating a commit')
-        subprocess.check_call(['ls', '-la'])
-        subprocess.check_call(['git', 'add', '.'])
-        subprocess.check_call(['git', 'status'])
-        subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
-        log_info('Pushing')
-        subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
+    if check_output(['git', 'status', '-s']).decode(sys.getdefaultencoding()):
+        with LogGroup('Uploading'):
+            sha = os.environ['GITHUB_SHA']
+            log_info('Creating a commit')
+            subprocess.check_call(['ls', '-la'])
+            subprocess.check_call(['git', 'add', '.'])
+            subprocess.check_call(['git', 'status'])
+            subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
+            log_info('Pushing')
+            subprocess.check_call(['git', 'push', clone_url, 'gh-pages'])
+    else:
+        log_info('There are no changes to documentation')
 
     os.chdir(old_cwd)
 
