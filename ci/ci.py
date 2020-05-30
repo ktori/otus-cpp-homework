@@ -116,8 +116,6 @@ def generate_and_upload_docs():
     for project in changed_projects:
         project_docs_out = os.path.join(tmp.name, project.cmake_project_name)
         project_docs_in = project.generate_docs()
-        log_info('project_docs_out', project_docs_out)
-        log_info('project_docs_in', project_docs_in)
         shutil.rmtree(project_docs_out, ignore_errors=True)
         copy_tree(project_docs_in, project_docs_out)
 
@@ -125,7 +123,6 @@ def generate_and_upload_docs():
         with LogGroup('Uploading'):
             sha = os.environ['GITHUB_SHA']
             log_info('Creating a commit')
-            subprocess.check_call(['ls', '-la'])
             subprocess.check_call(['git', 'add', '.'])
             subprocess.check_call(['git', 'status'])
             subprocess.check_call(['git', 'commit', '-a', '-m', f'Generated docs for {sha[0:8]}'])
