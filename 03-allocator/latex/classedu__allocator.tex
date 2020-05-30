@@ -1,0 +1,190 @@
+\hypertarget{classedu__allocator}{}\doxysection{edu\+\_\+allocator$<$ T, base\+\_\+count $>$ Class Template Reference}
+\label{classedu__allocator}\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+
+
+{\ttfamily \#include $<$edu\+\_\+allocator.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structedu__allocator_1_1rebind}{rebind}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}}
+\item 
+typedef ptrdiff\+\_\+t \mbox{\hyperlink{classedu__allocator_a7c64dafebaa7cde1a37248caba0226ca}{difference\+\_\+type}}
+\item 
+typedef T $\ast$ \mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}}
+\item 
+typedef const T $\ast$ \mbox{\hyperlink{classedu__allocator_aabb40d46b7dfb72ce0c3eed984a771fa}{const\+\_\+pointer}}
+\item 
+typedef T \& \mbox{\hyperlink{classedu__allocator_ad2c2e48954832a74ab522ad2093dfaba}{reference}}
+\item 
+typedef const T \& \mbox{\hyperlink{classedu__allocator_aa0ca747c0a96c4b00eec6c6a93d329e7}{const\+\_\+reference}}
+\item 
+typedef T \mbox{\hyperlink{classedu__allocator_ac2a6b2105b188c027d63daa51068f991}{value\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classedu__allocator_a1f4ffbfc259ed45c33bf568d4d80c77e}{edu\+\_\+allocator}} ()
+\item 
+\mbox{\hyperlink{classedu__allocator_a8bb03f4289b7490b96d62852a462bfc5}{edu\+\_\+allocator}} (const \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \&other)=delete
+\item 
+\mbox{\hyperlink{classedu__allocator_a1568fb6d6d3eba994495c6c36c9bd316}{edu\+\_\+allocator}} (\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \&\&other)=delete
+\item 
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \& \mbox{\hyperlink{classedu__allocator_a74205dc4ce395a099bb364e84ddb023e}{operator=}} (const \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \&other)=delete
+\item 
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \& \mbox{\hyperlink{classedu__allocator_af56502a382e898432e5c0a1e42e61e96}{operator=}} (\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} \&\&other)=delete
+\item 
+\mbox{\hyperlink{classedu__allocator_ac7e2dd1dab8e21c3e8d98fc389e1b19f}{$\sim$edu\+\_\+allocator}} ()
+\item 
+\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}} \mbox{\hyperlink{classedu__allocator_a024665ef87c08fb1e9a3fda489ef496e}{allocate}} (\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}} n)
+\item 
+void \mbox{\hyperlink{classedu__allocator_a4536512dd171e8fb38bed090aa964f34}{deallocate}} (\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}} p, \mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}} n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}} \mbox{\hyperlink{classedu__allocator_ac589cfa71f123e6e4e78a0f648235a9a}{base}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}} \mbox{\hyperlink{classedu__allocator_ae6cb130b199afb8e9c2a555508ff88d6}{allocated\+\_\+elements}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classedu__allocator_aabb40d46b7dfb72ce0c3eed984a771fa}\label{classedu__allocator_aabb40d46b7dfb72ce0c3eed984a771fa}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!const\_pointer@{const\_pointer}}
+\index{const\_pointer@{const\_pointer}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{const\_pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef const T$\ast$ \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_aabb40d46b7dfb72ce0c3eed984a771fa}{const\+\_\+pointer}}}
+
+\mbox{\Hypertarget{classedu__allocator_aa0ca747c0a96c4b00eec6c6a93d329e7}\label{classedu__allocator_aa0ca747c0a96c4b00eec6c6a93d329e7}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef const T\& \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_aa0ca747c0a96c4b00eec6c6a93d329e7}{const\+\_\+reference}}}
+
+\mbox{\Hypertarget{classedu__allocator_a7c64dafebaa7cde1a37248caba0226ca}\label{classedu__allocator_a7c64dafebaa7cde1a37248caba0226ca}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef ptrdiff\+\_\+t \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_a7c64dafebaa7cde1a37248caba0226ca}{difference\+\_\+type}}}
+
+\mbox{\Hypertarget{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}\label{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef T$\ast$ \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}}}
+
+\mbox{\Hypertarget{classedu__allocator_ad2c2e48954832a74ab522ad2093dfaba}\label{classedu__allocator_ad2c2e48954832a74ab522ad2093dfaba}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!reference@{reference}}
+\index{reference@{reference}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef T\& \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_ad2c2e48954832a74ab522ad2093dfaba}{reference}}}
+
+\mbox{\Hypertarget{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}\label{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef size\+\_\+t \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}}}
+
+\mbox{\Hypertarget{classedu__allocator_ac2a6b2105b188c027d63daa51068f991}\label{classedu__allocator_ac2a6b2105b188c027d63daa51068f991}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+typedef T \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator_ac2a6b2105b188c027d63daa51068f991}{value\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classedu__allocator_a1f4ffbfc259ed45c33bf568d4d80c77e}\label{classedu__allocator_a1f4ffbfc259ed45c33bf568d4d80c77e}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!edu\_allocator@{edu\_allocator}}
+\index{edu\_allocator@{edu\_allocator}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{edu\_allocator()}{edu\_allocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classedu__allocator_a8bb03f4289b7490b96d62852a462bfc5}\label{classedu__allocator_a8bb03f4289b7490b96d62852a462bfc5}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!edu\_allocator@{edu\_allocator}}
+\index{edu\_allocator@{edu\_allocator}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{edu\_allocator()}{edu\_allocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classedu__allocator_a1568fb6d6d3eba994495c6c36c9bd316}\label{classedu__allocator_a1568fb6d6d3eba994495c6c36c9bd316}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!edu\_allocator@{edu\_allocator}}
+\index{edu\_allocator@{edu\_allocator}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{edu\_allocator()}{edu\_allocator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classedu__allocator_ac7e2dd1dab8e21c3e8d98fc389e1b19f}\label{classedu__allocator_ac7e2dd1dab8e21c3e8d98fc389e1b19f}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!````~edu\_allocator@{$\sim$edu\_allocator}}
+\index{````~edu\_allocator@{$\sim$edu\_allocator}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$edu\_allocator()}{~edu\_allocator()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::$\sim$\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classedu__allocator_a024665ef87c08fb1e9a3fda489ef496e}\label{classedu__allocator_a024665ef87c08fb1e9a3fda489ef496e}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}} \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classedu__allocator_a4536512dd171e8fb38bed090aa964f34}\label{classedu__allocator_a4536512dd171e8fb38bed090aa964f34}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+void \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}}}]{p,  }\item[{\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classedu__allocator_a74205dc4ce395a099bb364e84ddb023e}\label{classedu__allocator_a74205dc4ce395a099bb364e84ddb023e}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}\& \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classedu__allocator_af56502a382e898432e5c0a1e42e61e96}\label{classedu__allocator_af56502a382e898432e5c0a1e42e61e96}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}\& \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classedu__allocator_ae6cb130b199afb8e9c2a555508ff88d6}\label{classedu__allocator_ae6cb130b199afb8e9c2a555508ff88d6}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!allocated\_elements@{allocated\_elements}}
+\index{allocated\_elements@{allocated\_elements}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{allocated\_elements}{allocated\_elements}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator_aa140c3e2a9364dcbc207fa148b5c1deb}{size\+\_\+type}} \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::allocated\+\_\+elements \{\}}
+
+\mbox{\Hypertarget{classedu__allocator_ac589cfa71f123e6e4e78a0f648235a9a}\label{classedu__allocator_ac589cfa71f123e6e4e78a0f648235a9a}} 
+\index{edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}!base@{base}}
+\index{base@{base}!edu\_allocator$<$ T, base\_count $>$@{edu\_allocator$<$ T, base\_count $>$}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t base\+\_\+count$>$ \\
+\mbox{\hyperlink{classedu__allocator_a735857fd1d42cae69aef990a62e597cf}{pointer}} \mbox{\hyperlink{classedu__allocator}{edu\+\_\+allocator}}$<$ T, base\+\_\+count $>$\+::base \{ nullptr \}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{edu__allocator_8hpp}{edu\+\_\+allocator.\+hpp}}\end{DoxyCompactItemize}
