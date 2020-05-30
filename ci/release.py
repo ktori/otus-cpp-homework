@@ -24,7 +24,7 @@ class Release:
 
     def create_remote(self):
         r = requests.post(f'{base_url()}/repos/{repository}/releases', json={
-            'tag_name': 'refs/heads/master',
+            'tag_name': 'latest',
             'target_commitish': sha,
             'name': self.name(),
             'body': f'Automatic CI build of projects'
