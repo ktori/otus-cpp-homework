@@ -9,28 +9,32 @@
 
 int main()
 {
-	matrix<int, -1, 3> mx{};
-	assert(mx.size() == 0);
+	matrix::matrix<int, 0> mx{};
 
-	auto a = mx[0][0][0];
-	assert(a == -1);
-	assert(mx.size() == 0);
+	for (int i = 0; i < 10; ++i)
+	{
+		mx[i][i] = i;
+		mx[i][9 - i] = 9 - i;
+	}
 
-	mx[100][100][100] = 314;
-	assert(mx[100][100][100] == 314);
-	assert(mx.size() == 1);
+	for (int i = 1; i <= 8; ++i)
+	{
+		for (int j = 1; j <= 8; ++j)
+		{
+			std::cout << int(mx[i][j]) << ' ';
+		}
+		std::cout << '\n';
+	}
 
-//	mx[100][100][100] = -1;
-//	assert(mx[100][100][100] == -1);
-//	assert(mx.size() == 0);
+	std::cout << "Size: " << mx.size() << '\n';
 
 	for (auto i : mx)
 	{
-		size_t x, y, z;
+		size_t a, b;
 		int v;
-		std::tie(x, y, z, v) = i;
+		std::tie(a, b, v) = i;
 
-		std::cout << x << y << z << v;
+		std::cout << '[' << a << "][" << b << "] = " << v << '\n';
 	}
 
 	return 0;

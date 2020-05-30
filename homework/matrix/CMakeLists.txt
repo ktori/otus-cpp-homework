@@ -22,3 +22,12 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT tori@ktori.me)
 
 include(CPack)
+
+enable_testing()
+if (NOT TARGET gtest)
+    add_subdirectory(../../googletest googletest EXCLUDE_FROM_ALL)
+endif ()
+
+add_executable(matrix_test test/matrix_test.cpp src/matrix.hpp src/detail/indexer.hpp src/detail/generators.hpp)
+target_link_libraries(matrix_test PRIVATE gtest gtest_main)
+add_test(matrix_test matrix_test)

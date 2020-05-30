@@ -42,7 +42,10 @@ class Project:
             subprocess.check_call(['make'], cwd=self.cwd)
 
     def run_tests(self):
-        pass
+        if os.path.exists(os.path.join(self.cwd, 'test')):
+            subprocess.check_call(['make', 'test'], cwd=self.cwd)
+        else:
+            log_info('No tests for', self.name)
 
     def create_package(self) -> str:
         with LogGroup(f'Building package for {self.name}'):
