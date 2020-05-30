@@ -46,7 +46,7 @@ class Project:
 
     def create_package(self) -> str:
         with LogGroup(f'Building package for {self.name}'):
-            subprocess.check_call(['make', 'package'])
+            subprocess.check_call(['make', 'package'], cwd=self.cwd)
             for file in os.listdir(self.cwd):
                 if file.endswith('.deb'):
                     return os.path.join(self.cwd, file)
