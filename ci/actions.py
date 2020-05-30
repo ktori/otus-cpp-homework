@@ -3,7 +3,7 @@ import sys
 
 def issue_command(name, properties: dict, message):
     escaped_message = message.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
-    print(f'::{name}{escaped_message}')
+    print(f'::{name}::{escaped_message}')
     sys.stdout.flush()
 
 
