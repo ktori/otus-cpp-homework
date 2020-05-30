@@ -35,7 +35,7 @@ int main()
 	std::map<int, int> first{};
 	work_on_map(first, 10, std::cout);
 
-	std::map<int, int, std::less<>, edu_allocator<int, 10>> second{};
+	std::map<int, int, std::less<>, edu_allocator<std::pair<int, int>, 10>> second{};
 	work_on_map(second, 10, std::cout);
 
 	edu_container<int, 10> third{};
