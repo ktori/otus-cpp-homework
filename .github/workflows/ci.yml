@@ -17,6 +17,9 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-      - run: python3 .github/ci.py
+      - name: Install Doxygen
+        run: sudo apt-get install -y doxygen
+      - name: Run CI
+        run: python3 .github/ci.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
