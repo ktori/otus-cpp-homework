@@ -17,6 +17,7 @@ void bulk::BlockPrinter::update(const std::vector<std::string>& data)
 	}
 
 	stream << "\n";
+	stream.flush();
 }
 
 bulk::BlockPrinter::BlockPrinter(std::ostream& stream) : stream(stream)

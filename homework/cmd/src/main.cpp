@@ -16,6 +16,8 @@
 #include <charconv>
 #include <cstring>
 #include <limits>
+#include <fstream>
+#include <chrono>
 
 /**
  * Retrieve block size argument from argv
@@ -56,11 +58,19 @@ int main(int argc, char** argv)
 	if (block_size == std::numeric_limits<size_t>::max())
 		return 1;
 
+	auto seconds =
+		std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+	auto filename = "bulk" + std::to_string(seconds) + ".log";
+
+	std::ofstream log_file{ filename, std::ios::out };
+
 	bulk::LineReader line_reader{ std::cin };
 	auto block_reader = bulk::BlockReader::create(block_size);
 	auto printer = bulk::BlockPrinter::create(std::cout);
+	auto file_printer = bulk::BlockPrinter::create(log_file);
 
 	line_reader.add_subscriber(block_reader);
+	block_reader->add_subscriber(file_printer);
 	block_reader->add_subscriber(printer);
 
 	while (line_reader.read_line());

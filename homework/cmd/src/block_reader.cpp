@@ -36,7 +36,7 @@ void bulk::BlockReader::update(const std::string& data)
 
 void bulk::BlockReader::flush()
 {
-	if (depth)
+	if (depth || stored_commands.empty())
 		return;
 
 	emit(stored_commands);
