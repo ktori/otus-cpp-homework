@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include <memory>
+#include <stdexcept>
 
 template<typename T, size_t size, typename Alloc = std::allocator<T>>
 class edu_container

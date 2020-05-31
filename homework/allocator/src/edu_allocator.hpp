@@ -6,6 +6,7 @@
 
 #include <cstddef>
 #include <memory>
+#include <cstdlib>
 
 template<typename T, size_t batch_count>
 class edu_allocator
