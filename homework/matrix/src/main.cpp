@@ -28,7 +28,7 @@ int main()
 
 	std::cout << "Size: " << mx.size() << '\n';
 
-	for (auto i : mx)
+	for (const auto& i : mx)
 	{
 		size_t a, b;
 		int v;

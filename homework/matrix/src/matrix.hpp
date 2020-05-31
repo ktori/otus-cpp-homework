@@ -6,6 +6,7 @@
 
 #include "detail/generators.hpp"
 #include "detail/indexer.hpp"
+#include "detail/iterator.hpp"
 
 #include <cstddef>
 #include <tuple>
@@ -41,6 +42,14 @@ namespace matrix
 		detail::indexer<matrix, dimension, index_type, key_type, value_type, dimension - 1> operator[](index_type i)
 		{
 			return detail::indexer<matrix, dimension, index_type, key_type, value_type, dimension - 1>(*this, {}, i);
+		}
+
+		detail::const_indexer<matrix, dimension, index_type, key_type, value_type, dimension - 1>
+		operator[](index_type i) const
+		{
+			return detail::const_indexer<matrix, dimension, index_type, key_type, value_type, dimension - 1>(*this,
+				{},
+				i);
 		}
 
 		value_type get(key_type key) const
@@ -109,46 +118,32 @@ namespace matrix
 
 		using map_type = typename std::unordered_map<key_type, value_type, hash, equality>;
 		using map_iterator_type = typename map_type::iterator;
+		using map_const_iterator_type = typename map_type::const_iterator;
+		using iterator_type = detail::iterator<key_type, value_type, map_iterator_type, iterator_value_type, dimension>;
+		using const_iterator_type = detail::iterator<key_type,
+													 value_type,
+													 map_const_iterator_type,
+													 iterator_value_type,
+													 dimension>;
 
-		struct iterator
+		iterator_type begin()
 		{
-			explicit iterator(map_iterator_type it) : it{ it }
-			{
-			}
-
-			iterator operator++()
-			{
-				++it;
-				return *this;
-			}
-			bool operator!=(const iterator& other) const
-			{
-				return it != other.it;
-			}
-			iterator_value_type operator*() const
-			{
-				return make_result(it->first, it->second, std::make_index_sequence<dimension>{});
-			}
-
-		private:
-			template<size_t... Is>
-			static constexpr iterator_value_type
-			make_result(key_type key, value_type value, std::index_sequence<Is...>)
-			{
-				return std::make_tuple(std::get<Is>(key)..., value);
-			}
-
-			map_iterator_type it;
-		};
-
-		iterator begin()
-		{
-			return iterator(data.begin());
+			return iterator_type(data.begin());
 		}
 
-		iterator end()
+		iterator_type end()
 		{
-			return iterator(data.end());
+			return iterator_type(data.end());
+		}
+
+		const_iterator_type begin() const
+		{
+			return const_iterator_type(data.cbegin());
+		}
+
+		const_iterator_type end() const
+		{
+			return const_iterator_type(data.cend());
 		}
 
 	private:

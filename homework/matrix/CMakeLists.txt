@@ -28,6 +28,6 @@ if (NOT TARGET gtest)
     add_subdirectory(../../googletest googletest EXCLUDE_FROM_ALL)
 endif ()
 
-add_executable(matrix_test test/matrix_test.cpp src/matrix.hpp src/detail/indexer.hpp src/detail/generators.hpp)
+add_executable(matrix_test test/matrix_test.cpp src/matrix.hpp src/detail/indexer.hpp src/detail/generators.hpp src/detail/iterator.hpp)
 target_link_libraries(matrix_test PRIVATE gtest gtest_main)
 add_test(matrix_test matrix_test)

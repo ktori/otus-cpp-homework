@@ -1,1 +1,1 @@
-target_sources(matrix PRIVATE main.cpp matrix.hpp detail/indexer.hpp detail/generators.hpp)
+target_sources(matrix PRIVATE main.cpp matrix.hpp detail/indexer.hpp detail/generators.hpp detail/iterator.hpp)

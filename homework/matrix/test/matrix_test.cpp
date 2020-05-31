@@ -69,3 +69,26 @@ TEST(matrix, operator_assign)
 
 	ASSERT_EQ(int(mx[100][100]), 217);
 }
+
+TEST(matrix, const_access)
+{
+	matrix::matrix<int, 0> mx{};
+
+	mx[12][34] = 10;
+
+	[](const decltype(mx)& m)
+	{
+	  for (auto i : m)
+	  {
+		  size_t x, y;
+		  int v;
+		  std::tie(x, y, v) = i;
+
+		  ASSERT_EQ(x, 12);
+		  ASSERT_EQ(y, 34);
+		  ASSERT_EQ(v, 10);
+	  }
+
+	  ASSERT_EQ(m[12][34], 10);
+	}(mx);
+}
