@@ -3,3 +3,4 @@ cmake-build-debug
 homework/**/docs
 homework/**/Doxyfile
 venv
+homework/**/cmake-build-debug

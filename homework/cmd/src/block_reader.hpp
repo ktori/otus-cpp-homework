@@ -2,6 +2,12 @@
 // Created by victoria on 30.05.20.
 //
 
+/**
+ * @file
+ * @author ktori
+ * @brief Header file for BlockReader class
+ */
+
 #pragma once
 
 #include "observable.hpp"

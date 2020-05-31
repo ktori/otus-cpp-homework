@@ -2,6 +2,12 @@
 // Created by victoria on 30.05.20.
 //
 
+/**
+ * @file
+ * @author ktori
+ * @brief Entry point of the program
+ */
+
 #include "line_reader.hpp"
 #include "block_reader.hpp"
 #include "block_printer.hpp"
@@ -11,6 +17,12 @@
 #include <cstring>
 #include <limits>
 
+/**
+ * Retrieve block size argument from argv
+ * @param argc Argument count from main
+ * @param argv Argument list from main
+ * @return Block size if argv contains it, size_t(-1) otherwise
+ */
 size_t parse_block_size(int argc, char** argv)
 {
 	auto error = std::numeric_limits<size_t>::max();

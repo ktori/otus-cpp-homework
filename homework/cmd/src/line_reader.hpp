@@ -2,6 +2,12 @@
 // Created by victoria on 31.05.20.
 //
 
+/**
+ * @file
+ * @author ktori
+ * @brief Header file for LineReader class
+ */
+
 #pragma once
 
 #include "observable.hpp"
