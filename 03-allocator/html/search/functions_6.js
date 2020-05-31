@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d',['operator=',['../classedu__allocator.html#a74205dc4ce395a099bb364e84ddb023e',1,'edu_allocator::operator=(const edu_allocator &amp;other)=delete'],['../classedu__allocator.html#af56502a382e898432e5c0a1e42e61e96',1,'edu_allocator::operator=(edu_allocator &amp;&amp;other)=delete']]]
+  ['work_5fon_5fcontainer',['work_on_container',['../main_8cpp.html#a612eb0b6c9949a815e359173e8ccdcc5',1,'main.cpp']]],
+  ['work_5fon_5fmap',['work_on_map',['../main_8cpp.html#a8c178f4c7b767f8ac37e10278ed0c39a',1,'main.cpp']]]
 ];
