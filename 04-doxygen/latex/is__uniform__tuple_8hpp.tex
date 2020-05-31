@@ -1,0 +1,40 @@
+\hypertarget{is__uniform__tuple_8hpp}{}\section{src/is\+\_\+uniform\+\_\+tuple.hpp File Reference}
+\label{is__uniform__tuple_8hpp}\index{src/is\+\_\+uniform\+\_\+tuple.\+hpp@{src/is\+\_\+uniform\+\_\+tuple.\+hpp}}
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structis__uniform__tuple}{is\+\_\+uniform\+\_\+tuple$<$ T, typename $>$}
+\item 
+struct \hyperlink{structis__uniform__tuple_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4}{is\+\_\+uniform\+\_\+tuple$<$ std\+::tuple$<$ Ts... $>$ $>$}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\constexpr bool \hyperlink{is__uniform__tuple_8hpp_a8f9339dd3f878ad76e81f7a03785284d}{is\+\_\+same\+\_\+all\+\_\+v} = std\+::conjunction\+\_\+v$<$std\+::is\+\_\+same$<$T, Ts$>$...$>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \hyperlink{is__uniform__tuple_8hpp_a7bce08af2c229ebd49e1419ef9bb518b}{is\+\_\+uniform\+\_\+tuple\+\_\+v} = \hyperlink{structis__uniform__tuple}{is\+\_\+uniform\+\_\+tuple}$<$std\+::remove\+\_\+const\+\_\+t$<$std\+::remove\+\_\+cv\+\_\+t$<$T$>$$>$$>$\+::value
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{is__uniform__tuple_8hpp_a8f9339dd3f878ad76e81f7a03785284d}\label{is__uniform__tuple_8hpp_a8f9339dd3f878ad76e81f7a03785284d}} 
+\index{is\+\_\+uniform\+\_\+tuple.\+hpp@{is\+\_\+uniform\+\_\+tuple.\+hpp}!is\+\_\+same\+\_\+all\+\_\+v@{is\+\_\+same\+\_\+all\+\_\+v}}
+\index{is\+\_\+same\+\_\+all\+\_\+v@{is\+\_\+same\+\_\+all\+\_\+v}!is\+\_\+uniform\+\_\+tuple.\+hpp@{is\+\_\+uniform\+\_\+tuple.\+hpp}}
+\subsubsection{\texorpdfstring{is\+\_\+same\+\_\+all\+\_\+v}{is\_same\_all\_v}}
+{\footnotesize\ttfamily template$<$typename T , typename... Ts$>$ \\
+constexpr bool is\+\_\+same\+\_\+all\+\_\+v = std\+::conjunction\+\_\+v$<$std\+::is\+\_\+same$<$T, Ts$>$...$>$}
+
+\mbox{\Hypertarget{is__uniform__tuple_8hpp_a7bce08af2c229ebd49e1419ef9bb518b}\label{is__uniform__tuple_8hpp_a7bce08af2c229ebd49e1419ef9bb518b}} 
+\index{is\+\_\+uniform\+\_\+tuple.\+hpp@{is\+\_\+uniform\+\_\+tuple.\+hpp}!is\+\_\+uniform\+\_\+tuple\+\_\+v@{is\+\_\+uniform\+\_\+tuple\+\_\+v}}
+\index{is\+\_\+uniform\+\_\+tuple\+\_\+v@{is\+\_\+uniform\+\_\+tuple\+\_\+v}!is\+\_\+uniform\+\_\+tuple.\+hpp@{is\+\_\+uniform\+\_\+tuple.\+hpp}}
+\subsubsection{\texorpdfstring{is\+\_\+uniform\+\_\+tuple\+\_\+v}{is\_uniform\_tuple\_v}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool is\+\_\+uniform\+\_\+tuple\+\_\+v = \hyperlink{structis__uniform__tuple}{is\+\_\+uniform\+\_\+tuple}$<$std\+::remove\+\_\+const\+\_\+t$<$std\+::remove\+\_\+cv\+\_\+t$<$T$>$$>$$>$\+::value}
+
+Checks if type is a tuple with uniform parameter types 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to be checked \\
+\hline
+\end{DoxyTemplParams}

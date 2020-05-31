@@ -1,0 +1,54 @@
+\hypertarget{is__string_8hpp}{}\section{src/is\+\_\+string.hpp File Reference}
+\label{is__string_8hpp}\index{src/is\+\_\+string.\+hpp@{src/is\+\_\+string.\+hpp}}
+
+
+Helper types.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structis__string}{is\+\_\+string$<$ T, typename $>$}
+\item 
+struct \hyperlink{structis__string_3_01std_1_1basic__string_3_01T_00_01Traits_00_01Alloc_01_4_00_01void_01_4}{is\+\_\+string$<$ std\+::basic\+\_\+string$<$ T, Traits, Alloc $>$, void $>$}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \hyperlink{is__string_8hpp_a86a2e3fab8ec3012c24e41f2ad073cf9}{is\+\_\+string\+\_\+v} = \hyperlink{structis__string}{is\+\_\+string}$<$T$>$\+::value
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \hyperlink{is__string_8hpp_a7e68b78bf5e32fedaa954e5315d0e73c}{is\+\_\+c\+\_\+string\+\_\+v}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper types. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{is__string_8hpp_a7e68b78bf5e32fedaa954e5315d0e73c}\label{is__string_8hpp_a7e68b78bf5e32fedaa954e5315d0e73c}} 
+\index{is\+\_\+string.\+hpp@{is\+\_\+string.\+hpp}!is\+\_\+c\+\_\+string\+\_\+v@{is\+\_\+c\+\_\+string\+\_\+v}}
+\index{is\+\_\+c\+\_\+string\+\_\+v@{is\+\_\+c\+\_\+string\+\_\+v}!is\+\_\+string.\+hpp@{is\+\_\+string.\+hpp}}
+\subsubsection{\texorpdfstring{is\+\_\+c\+\_\+string\+\_\+v}{is\_c\_string\_v}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool is\+\_\+c\+\_\+string\+\_\+v}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= std::is\_same\_v<\textcolor{keywordtype}{char}*,
+                                              std::remove\_reference\_t<
+                                                  std::remove\_cv\_t<
+                                                      std::decay\_t<T>
+                                                  >
+                                              >
+>
+\end{DoxyCode}
+\mbox{\Hypertarget{is__string_8hpp_a86a2e3fab8ec3012c24e41f2ad073cf9}\label{is__string_8hpp_a86a2e3fab8ec3012c24e41f2ad073cf9}} 
+\index{is\+\_\+string.\+hpp@{is\+\_\+string.\+hpp}!is\+\_\+string\+\_\+v@{is\+\_\+string\+\_\+v}}
+\index{is\+\_\+string\+\_\+v@{is\+\_\+string\+\_\+v}!is\+\_\+string.\+hpp@{is\+\_\+string.\+hpp}}
+\subsubsection{\texorpdfstring{is\+\_\+string\+\_\+v}{is\_string\_v}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool is\+\_\+string\+\_\+v = \hyperlink{structis__string}{is\+\_\+string}$<$T$>$\+::value}
+

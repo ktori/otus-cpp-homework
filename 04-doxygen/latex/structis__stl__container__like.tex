@@ -1,0 +1,81 @@
+\hypertarget{structis__stl__container__like}{}\section{is\+\_\+stl\+\_\+container\+\_\+like$<$ T $>$ Struct Template Reference}
+\label{structis__stl__container__like}\index{is\+\_\+stl\+\_\+container\+\_\+like$<$ T $>$@{is\+\_\+stl\+\_\+container\+\_\+like$<$ T $>$}}
+
+
+{\ttfamily \#include $<$is\+\_\+stl\+\_\+container\+\_\+like.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::remove\+\_\+const$<$ T $>$\+::type \hyperlink{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}{test\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename A $>$ }\\static constexpr bool \hyperlink{structis__stl__container__like_ada5dd0e7feabf4e4f7fe79db7de5d31d}{test} (A $\ast$pt, A const $\ast$cpt=nullptr, decltype(pt-\/$>$begin()) $\ast$=nullptr, decltype(pt-\/$>$end()) $\ast$=nullptr, decltype(cpt-\/$>$begin()) $\ast$=nullptr, decltype(cpt-\/$>$end()) $\ast$=nullptr, typename A\+::iterator $\ast$pi=nullptr, typename A\+::const\+\_\+iterator $\ast$pci=nullptr, typename A\+::value\+\_\+type $\ast$pv=nullptr)
+\item 
+{\footnotesize template$<$typename A $>$ }\\static constexpr bool \hyperlink{structis__stl__container__like_a44d72e8e872d7eb954dca89f6103e817}{test} (...)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{structis__stl__container__like_a78703ef8497a4ebf27445e64d2eba742}{value} = \hyperlink{structis__stl__container__like_ada5dd0e7feabf4e4f7fe79db7de5d31d}{test}$<$\hyperlink{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}{test\+\_\+type}$>$(nullptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct is\+\_\+stl\+\_\+container\+\_\+like$<$ T $>$}
+
+Determine if a type is container-\/like 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to be checked \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\href{https://stackoverflow.com/questions/9407367/determine-if-a-type-is-an-stl-container-at-compile-time}{\tt https\+://stackoverflow.\+com/questions/9407367/determine-\/if-\/a-\/type-\/is-\/an-\/stl-\/container-\/at-\/compile-\/time} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}\label{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}} 
+\index{is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}!test\+\_\+type@{test\+\_\+type}}
+\index{test\+\_\+type@{test\+\_\+type}!is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}}
+\subsubsection{\texorpdfstring{test\+\_\+type}{test\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef std\+::remove\+\_\+const$<$T$>$\+::type \hyperlink{structis__stl__container__like}{is\+\_\+stl\+\_\+container\+\_\+like}$<$ T $>$\+::\hyperlink{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}{test\+\_\+type}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structis__stl__container__like_ada5dd0e7feabf4e4f7fe79db7de5d31d}\label{structis__stl__container__like_ada5dd0e7feabf4e4f7fe79db7de5d31d}} 
+\index{is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}!test@{test}}
+\index{test@{test}!is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}}
+\subsubsection{\texorpdfstring{test()}{test()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename A $>$ \\
+static constexpr bool \hyperlink{structis__stl__container__like}{is\+\_\+stl\+\_\+container\+\_\+like}$<$ T $>$\+::test (\begin{DoxyParamCaption}\item[{A $\ast$}]{pt,  }\item[{A const $\ast$}]{cpt = {\ttfamily nullptr},  }\item[{decltype(pt-\/$>$begin()) $\ast$}]{ = {\ttfamily nullptr},  }\item[{decltype(pt-\/$>$end()) $\ast$}]{ = {\ttfamily nullptr},  }\item[{decltype(cpt-\/$>$begin()) $\ast$}]{ = {\ttfamily nullptr},  }\item[{decltype(cpt-\/$>$end()) $\ast$}]{ = {\ttfamily nullptr},  }\item[{typename A\+::iterator $\ast$}]{pi = {\ttfamily nullptr},  }\item[{typename A\+::const\+\_\+iterator $\ast$}]{pci = {\ttfamily nullptr},  }\item[{typename A\+::value\+\_\+type $\ast$}]{pv = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structis__stl__container__like_a44d72e8e872d7eb954dca89f6103e817}\label{structis__stl__container__like_a44d72e8e872d7eb954dca89f6103e817}} 
+\index{is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}!test@{test}}
+\index{test@{test}!is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}}
+\subsubsection{\texorpdfstring{test()}{test()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename A $>$ \\
+static constexpr bool \hyperlink{structis__stl__container__like}{is\+\_\+stl\+\_\+container\+\_\+like}$<$ T $>$\+::test (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structis__stl__container__like_a78703ef8497a4ebf27445e64d2eba742}\label{structis__stl__container__like_a78703ef8497a4ebf27445e64d2eba742}} 
+\index{is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}!value@{value}}
+\index{value@{value}!is\+\_\+stl\+\_\+container\+\_\+like@{is\+\_\+stl\+\_\+container\+\_\+like}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const bool \hyperlink{structis__stl__container__like}{is\+\_\+stl\+\_\+container\+\_\+like}$<$ T $>$\+::value = \hyperlink{structis__stl__container__like_ada5dd0e7feabf4e4f7fe79db7de5d31d}{test}$<$\hyperlink{structis__stl__container__like_a4963c0bde8b0f68013b20041308b82e5}{test\+\_\+type}$>$(nullptr)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{is__stl__container__like_8hpp}{is\+\_\+stl\+\_\+container\+\_\+like.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\hypertarget{static__for_8hpp}{}\section{src/static\+\_\+for.hpp File Reference}
+\label{static__for_8hpp}\index{src/static\+\_\+for.\+hpp@{src/static\+\_\+for.\+hpp}}
+{\ttfamily \#include $<$utility$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Tup , class Func , std\+::size\+\_\+t ... Is$>$ }\\constexpr void \hyperlink{static__for_8hpp_aa52c2cc34b6400b3c7a5e2f323b6eef9}{static\+\_\+for\+\_\+impl} (Tup \&\&t, Func \&\&f, std\+::index\+\_\+sequence$<$ Is... $>$)
+\item 
+{\footnotesize template$<$class ... T, class Func $>$ }\\constexpr void \hyperlink{static__for_8hpp_ae37d6ad4f6fd3442600b3c01fc093eef}{static\+\_\+for} (const std\+::tuple$<$ T... $>$ \&t, Func \&\&f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{static__for_8hpp_ae37d6ad4f6fd3442600b3c01fc093eef}\label{static__for_8hpp_ae37d6ad4f6fd3442600b3c01fc093eef}} 
+\index{static\+\_\+for.\+hpp@{static\+\_\+for.\+hpp}!static\+\_\+for@{static\+\_\+for}}
+\index{static\+\_\+for@{static\+\_\+for}!static\+\_\+for.\+hpp@{static\+\_\+for.\+hpp}}
+\subsubsection{\texorpdfstring{static\+\_\+for()}{static\_for()}}
+{\footnotesize\ttfamily template$<$class ... T, class Func $>$ \\
+constexpr void static\+\_\+for (\begin{DoxyParamCaption}\item[{const std\+::tuple$<$ T... $>$ \&}]{t,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+
+Helper function to iterate over a tuple 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tuple type arguments \\
+\hline
+{\em Func} & Function type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Tuple \\
+\hline
+{\em f} & Function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{static__for_8hpp_aa52c2cc34b6400b3c7a5e2f323b6eef9}\label{static__for_8hpp_aa52c2cc34b6400b3c7a5e2f323b6eef9}} 
+\index{static\+\_\+for.\+hpp@{static\+\_\+for.\+hpp}!static\+\_\+for\+\_\+impl@{static\+\_\+for\+\_\+impl}}
+\index{static\+\_\+for\+\_\+impl@{static\+\_\+for\+\_\+impl}!static\+\_\+for.\+hpp@{static\+\_\+for.\+hpp}}
+\subsubsection{\texorpdfstring{static\+\_\+for\+\_\+impl()}{static\_for\_impl()}}
+{\footnotesize\ttfamily template$<$class Tup , class Func , std\+::size\+\_\+t ... Is$>$ \\
+constexpr void static\+\_\+for\+\_\+impl (\begin{DoxyParamCaption}\item[{Tup \&\&}]{t,  }\item[{Func \&\&}]{f,  }\item[{std\+::index\+\_\+sequence$<$ Is... $>$}]{ }\end{DoxyParamCaption})}
+
