@@ -68,6 +68,9 @@ $(function() {
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Entry point of the program.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="line__reader_8hpp_source.html">line_reader.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="block__reader_8hpp_source.html">block_reader.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="block__printer_8hpp_source.html">block_printer.hpp</a>&quot;</code><br />
@@ -83,7 +86,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Entry point of the program. </p>
+<dl class="section author"><dt>Author</dt><dd>ktori </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -137,6 +143,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retrieve block size argument from argv </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Argument count from main </td></tr>
+    <tr><td class="paramname">argv</td><td>Argument list from main </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Block size if argv contains it, size_t(-1) otherwise </dd></dl>
 
 </div>
 </div>

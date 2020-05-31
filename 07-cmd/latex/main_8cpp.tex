@@ -1,5 +1,10 @@
 \hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
 \label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+
+Entry point of the program.  
+
+
 {\ttfamily \#include \char`\"{}line\+\_\+reader.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}block\+\_\+reader.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}block\+\_\+printer.\+hpp\char`\"{}}\newline
@@ -16,6 +21,14 @@ int \hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, cha
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Entry point of the program. 
+
+\begin{DoxyAuthor}{Author}
+ktori 
+\end{DoxyAuthor}
+
+
 \subsection{Function Documentation}
 \mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
 \index{main.\+cpp@{main.\+cpp}!main@{main}}
@@ -29,3 +42,13 @@ int \hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, cha
 \subsubsection{\texorpdfstring{parse\+\_\+block\+\_\+size()}{parse\_block\_size()}}
 {\footnotesize\ttfamily size\+\_\+t parse\+\_\+block\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
+Retrieve block size argument from argv 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Argument count from main \\
+\hline
+{\em argv} & Argument list from main \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Block size if argv contains it, size\+\_\+t(-\/1) otherwise 
+\end{DoxyReturn}
