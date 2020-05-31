@@ -4,36 +4,41 @@
 
 #include "block_reader.hpp"
 
-std::unique_ptr<bulk::CommandBlock> bulk::BlockReader::read_block()
+bulk::BlockReader::BlockReader(size_t block_size) : block_size(block_size)
 {
-	if (!stream)
-		return nullptr;
+	stored_commands.reserve(block_size);
+}
 
-	std::vector<std::string> commands{};
-	commands.reserve(block_size);
-	size_t depth = 0;
+std::shared_ptr<bulk::BlockReader> bulk::BlockReader::create(size_t block_size)
+{
+	return std::shared_ptr<BlockReader>(new bulk::BlockReader(block_size));
+}
 
-	std::string s;
-	while (std::getline(stream, s))
+void bulk::BlockReader::update(const std::string& data)
+{
+	if (data == "{")
 	{
-		if (s == "{")
-		{
-			depth++;
-			continue;
-		}
-		if (s == "}")
-		{
-			if (!depth || !--depth)
-				break;
-			continue;
-		}
-		commands.push_back(std::move(s));
-		if (depth == 0 && commands.size() >= block_size)
-			break;
+		depth++;
+		return;
+	}
+	if (data == "}")
+	{
+		if (!depth || !--depth)
+			flush();
+		return;
 	}
 
-	if (depth == 0)
-		return std::make_unique<CommandBlock>(commands);
+	stored_commands.push_back(data);
 
-	return nullptr;
+	if (!depth && stored_commands.size() >= block_size)
+		flush();
+}
+
+void bulk::BlockReader::flush()
+{
+	if (depth)
+		return;
+
+	emit(stored_commands);
+	stored_commands.clear();
 }
