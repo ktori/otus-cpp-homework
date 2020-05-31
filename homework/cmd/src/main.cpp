@@ -9,6 +9,7 @@
 #include <iostream>
 #include <charconv>
 #include <cstring>
+#include <limits>
 
 size_t parse_block_size(int argc, char** argv)
 {
