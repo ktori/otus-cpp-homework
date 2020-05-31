@@ -7,6 +7,8 @@
 #include <cstddef>
 #include <memory>
 #include <cstdlib>
+#include <forward_list>
+#include <cassert>
 
 template<typename T, size_t batch_count>
 class edu_allocator
@@ -22,14 +24,14 @@ public:
 
 	[[nodiscard]] pointer allocate(size_type n)
 	{
-		auto adjusted_count = n % batch_count ? batch_count * (n / batch_count + 1) : n;
+		auto& block = get_block_for_alloc(n);
 
-		return reinterpret_cast<pointer>(std::malloc(adjusted_count * sizeof(T)));
+		return block.reserve(n);
 	}
 
 	void deallocate(pointer p, size_type n)
 	{
-		std::free(p);
+		// TODO
 	}
 
 	template<class U>
@@ -37,4 +39,51 @@ public:
 	{
 		typedef edu_allocator<U, batch_count> other;
 	};
+
+private:
+	struct block
+	{
+		inline explicit block(size_t required_count) :
+			max_count{
+				required_count % batch_count
+				? (required_count / batch_count) + 1 * batch_count
+				: required_count
+			}, data{ new T[max_count] }
+		{
+		}
+
+		inline bool can_fit(size_t element_count) const
+		{
+			return count + element_count < max_count;
+		}
+
+		inline pointer reserve(size_t element_count)
+		{
+			auto ptr = data.get() + sizeof(value_type) * count;
+			count += element_count;
+
+			assert(count <= max_count);
+
+			return ptr;
+		}
+
+		size_t count{};
+		const size_t max_count{};
+		std::unique_ptr<value_type[]> data;
+	};
+
+	block& get_block_for_alloc(size_t element_count)
+	{
+		// find a block that would fit
+		for (auto& block : blocks)
+		{
+			if (block.can_fit(element_count))
+				return block;
+		}
+
+		// create a new block that will fit
+		return blocks.emplace_front(element_count);
+	}
+
+	std::forward_list<block> blocks{};
 };
