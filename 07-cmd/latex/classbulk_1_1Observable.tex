@@ -1,0 +1,59 @@
+\hypertarget{classbulk_1_1Observable}{}\section{bulk\+:\+:Observable$<$ T $>$ Class Template Reference}
+\label{classbulk_1_1Observable}\index{bulk\+::\+Observable$<$ T $>$@{bulk\+::\+Observable$<$ T $>$}}
+
+
+{\ttfamily \#include $<$observable.\+hpp$>$}
+
+Inheritance diagram for bulk\+:\+:Observable$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbulk_1_1Observable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classbulk_1_1Observable_a4927059b909f8116927eb5275698153d}{$\sim$\+Observable} ()=default
+\item 
+virtual void \hyperlink{classbulk_1_1Observable_a1d014ef91398bff19bf96d9ef6bd5e10}{add\+\_\+subscriber} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1Observer}{Observer}$<$ T $>$$>$ \&observer)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bulk\+::\+Observable$<$ T $>$}
+
+Interface for observable of type T 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type that is emitted by observable \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbulk_1_1Observable_a4927059b909f8116927eb5275698153d}\label{classbulk_1_1Observable_a4927059b909f8116927eb5275698153d}} 
+\index{bulk\+::\+Observable@{bulk\+::\+Observable}!````~Observable@{$\sim$\+Observable}}
+\index{````~Observable@{$\sim$\+Observable}!bulk\+::\+Observable@{bulk\+::\+Observable}}
+\subsubsection{\texorpdfstring{$\sim$\+Observable()}{~Observable()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{classbulk_1_1Observable}{bulk\+::\+Observable}$<$ T $>$\+::$\sim$\hyperlink{classbulk_1_1Observable}{Observable} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbulk_1_1Observable_a1d014ef91398bff19bf96d9ef6bd5e10}\label{classbulk_1_1Observable_a1d014ef91398bff19bf96d9ef6bd5e10}} 
+\index{bulk\+::\+Observable@{bulk\+::\+Observable}!add\+\_\+subscriber@{add\+\_\+subscriber}}
+\index{add\+\_\+subscriber@{add\+\_\+subscriber}!bulk\+::\+Observable@{bulk\+::\+Observable}}
+\subsubsection{\texorpdfstring{add\+\_\+subscriber()}{add\_subscriber()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual void \hyperlink{classbulk_1_1Observable}{bulk\+::\+Observable}$<$ T $>$\+::add\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1Observer}{Observer}$<$ T $>$$>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}{bulk\+::\+Abstract\+Observable$<$ T $>$}, \hyperlink{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}{bulk\+::\+Abstract\+Observable$<$ std\+::string $>$}, and \hyperlink{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}{bulk\+::\+Abstract\+Observable$<$ std\+::vector$<$ std\+::string $>$ $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{observable_8hpp}{observable.\+hpp}\end{DoxyCompactItemize}

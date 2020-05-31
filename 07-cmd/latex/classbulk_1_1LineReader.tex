@@ -1,0 +1,63 @@
+\hypertarget{classbulk_1_1LineReader}{}\section{bulk\+:\+:Line\+Reader Class Reference}
+\label{classbulk_1_1LineReader}\index{bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}}
+
+
+{\ttfamily \#include $<$line\+\_\+reader.\+hpp$>$}
+
+Inheritance diagram for bulk\+:\+:Line\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbulk_1_1LineReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbulk_1_1LineReader_aa257744aa82d916e0bbd16dd9766e88b}{$\sim$\+Line\+Reader} () override=default
+\item 
+\hyperlink{classbulk_1_1LineReader_aba7481f117f2155880d3e6b8e069633b}{Line\+Reader} (std\+::istream \&stream)
+\item 
+bool \hyperlink{classbulk_1_1LineReader_a8d0d6a11d162f9e020eed84e563a585f}{read\+\_\+line} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Reads an input stream line-\/by-\/line, emits every line 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbulk_1_1LineReader_aa257744aa82d916e0bbd16dd9766e88b}\label{classbulk_1_1LineReader_aa257744aa82d916e0bbd16dd9766e88b}} 
+\index{bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}!````~Line\+Reader@{$\sim$\+Line\+Reader}}
+\index{````~Line\+Reader@{$\sim$\+Line\+Reader}!bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}}
+\subsubsection{\texorpdfstring{$\sim$\+Line\+Reader()}{~LineReader()}}
+{\footnotesize\ttfamily bulk\+::\+Line\+Reader\+::$\sim$\+Line\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbulk_1_1LineReader_aba7481f117f2155880d3e6b8e069633b}\label{classbulk_1_1LineReader_aba7481f117f2155880d3e6b8e069633b}} 
+\index{bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}!Line\+Reader@{Line\+Reader}}
+\index{Line\+Reader@{Line\+Reader}!bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}}
+\subsubsection{\texorpdfstring{Line\+Reader()}{LineReader()}}
+{\footnotesize\ttfamily bulk\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a reader, reading lines from the stream 
+\begin{DoxyParams}{Parameters}
+{\em stream} & Stream to read from \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbulk_1_1LineReader_a8d0d6a11d162f9e020eed84e563a585f}\label{classbulk_1_1LineReader_a8d0d6a11d162f9e020eed84e563a585f}} 
+\index{bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}!read\+\_\+line@{read\+\_\+line}}
+\index{read\+\_\+line@{read\+\_\+line}!bulk\+::\+Line\+Reader@{bulk\+::\+Line\+Reader}}
+\subsubsection{\texorpdfstring{read\+\_\+line()}{read\_line()}}
+{\footnotesize\ttfamily bool bulk\+::\+Line\+Reader\+::read\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Attempts to read a single line \begin{DoxyReturn}{Returns}
+true if reading was successful, false if E\+OF was reached, or other input error occurred 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{line__reader_8hpp}{line\+\_\+reader.\+hpp}\item 
+src/\hyperlink{line__reader_8cpp}{line\+\_\+reader.\+cpp}\end{DoxyCompactItemize}

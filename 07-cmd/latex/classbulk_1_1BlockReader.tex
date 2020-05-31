@@ -1,0 +1,97 @@
+\hypertarget{classbulk_1_1BlockReader}{}\section{bulk\+:\+:Block\+Reader Class Reference}
+\label{classbulk_1_1BlockReader}\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+
+
+{\ttfamily \#include $<$block\+\_\+reader.\+hpp$>$}
+
+Inheritance diagram for bulk\+:\+:Block\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.744548cm]{classbulk_1_1BlockReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbulk_1_1BlockReader_a163856bf35ee489d5b2d0cae520fe89e}{$\sim$\+Block\+Reader} () override=default
+\item 
+void \hyperlink{classbulk_1_1BlockReader_a0a3b9ff69552b233b037afcd7e858ef1}{update} (const std\+::string \&data) override
+\item 
+void \hyperlink{classbulk_1_1BlockReader_a03c580cc41ffd5e3d1271eddba9ca261}{flush} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1BlockReader}{Block\+Reader} $>$ \hyperlink{classbulk_1_1BlockReader_af0d865e52b8882bf3ad7e2ee7de4c82e}{create} (size\+\_\+t \hyperlink{classbulk_1_1BlockReader_a368298f7d12180b3a59597b605154b1d}{block\+\_\+size})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \hyperlink{classbulk_1_1BlockReader_a368298f7d12180b3a59597b605154b1d}{block\+\_\+size}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Reads blocks from stream of lines, emits blocks when they are formed correctly By default, a block is a vector of size determined by block\+\_\+size, but this can be changed if block contains commands like \{ and \} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbulk_1_1BlockReader_a163856bf35ee489d5b2d0cae520fe89e}\label{classbulk_1_1BlockReader_a163856bf35ee489d5b2d0cae520fe89e}} 
+\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}!````~Block\+Reader@{$\sim$\+Block\+Reader}}
+\index{````~Block\+Reader@{$\sim$\+Block\+Reader}!bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+\subsubsection{\texorpdfstring{$\sim$\+Block\+Reader()}{~BlockReader()}}
+{\footnotesize\ttfamily bulk\+::\+Block\+Reader\+::$\sim$\+Block\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbulk_1_1BlockReader_af0d865e52b8882bf3ad7e2ee7de4c82e}\label{classbulk_1_1BlockReader_af0d865e52b8882bf3ad7e2ee7de4c82e}} 
+\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}!create@{create}}
+\index{create@{create}!bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1BlockReader}{bulk\+::\+Block\+Reader} $>$ bulk\+::\+Block\+Reader\+::create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{block\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates an instance of \hyperlink{classbulk_1_1BlockReader}{Block\+Reader} 
+\begin{DoxyParams}{Parameters}
+{\em block\+\_\+size} & Amount of lines the block will contain if input doesn\textquotesingle{}t have \{ or \} commands \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of \hyperlink{classbulk_1_1BlockReader}{Block\+Reader} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbulk_1_1BlockReader_a03c580cc41ffd5e3d1271eddba9ca261}\label{classbulk_1_1BlockReader_a03c580cc41ffd5e3d1271eddba9ca261}} 
+\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}!flush@{flush}}
+\index{flush@{flush}!bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void bulk\+::\+Block\+Reader\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flushes (emits) a block, only if \char`\"{}\{\char`\"{} command wasn\textquotesingle{}t issued, or had \char`\"{}\}\char`\"{} that was paired to it \mbox{\Hypertarget{classbulk_1_1BlockReader_a0a3b9ff69552b233b037afcd7e858ef1}\label{classbulk_1_1BlockReader_a0a3b9ff69552b233b037afcd7e858ef1}} 
+\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}!update@{update}}
+\index{update@{update}!bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void bulk\+::\+Block\+Reader\+::update (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process a line 
+\begin{DoxyParams}{Parameters}
+{\em data} & Line without trailing newline character, \char`\"{}\{\char`\"{} and \char`\"{}\}\char`\"{} have special meaning \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classbulk_1_1Observer_af17104660bf8b287e467213c4efbee2e}{bulk\+::\+Observer$<$ std\+::string $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classbulk_1_1BlockReader_a368298f7d12180b3a59597b605154b1d}\label{classbulk_1_1BlockReader_a368298f7d12180b3a59597b605154b1d}} 
+\index{bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}!block\+\_\+size@{block\+\_\+size}}
+\index{block\+\_\+size@{block\+\_\+size}!bulk\+::\+Block\+Reader@{bulk\+::\+Block\+Reader}}
+\subsubsection{\texorpdfstring{block\+\_\+size}{block\_size}}
+{\footnotesize\ttfamily const size\+\_\+t bulk\+::\+Block\+Reader\+::block\+\_\+size}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{block__reader_8hpp}{block\+\_\+reader.\+hpp}\item 
+src/\hyperlink{block__reader_8cpp}{block\+\_\+reader.\+cpp}\end{DoxyCompactItemize}

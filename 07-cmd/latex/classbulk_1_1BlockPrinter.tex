@@ -1,0 +1,74 @@
+\hypertarget{classbulk_1_1BlockPrinter}{}\section{bulk\+:\+:Block\+Printer Class Reference}
+\label{classbulk_1_1BlockPrinter}\index{bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}}
+
+
+{\ttfamily \#include $<$block\+\_\+printer.\+hpp$>$}
+
+Inheritance diagram for bulk\+:\+:Block\+Printer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbulk_1_1BlockPrinter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbulk_1_1BlockPrinter_ade61ac6f7602a0ee469244c98f43bc03}{$\sim$\+Block\+Printer} () override=default
+\item 
+void \hyperlink{classbulk_1_1BlockPrinter_a9f961b39d2c0bf9112524bf6773bb3e1}{update} (const std\+::vector$<$ std\+::string $>$ \&data) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1BlockPrinter}{bulk\+::\+Block\+Printer} $>$ \hyperlink{classbulk_1_1BlockPrinter_ad0e918167006db76007fb2520ef3d228}{create} (std\+::ostream \&stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prints incoming blocks (vectors of string) in format\+: \char`\"{}bulk\+: A, B, C$<$newline$>$\char`\"{} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbulk_1_1BlockPrinter_ade61ac6f7602a0ee469244c98f43bc03}\label{classbulk_1_1BlockPrinter_ade61ac6f7602a0ee469244c98f43bc03}} 
+\index{bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}!````~Block\+Printer@{$\sim$\+Block\+Printer}}
+\index{````~Block\+Printer@{$\sim$\+Block\+Printer}!bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}}
+\subsubsection{\texorpdfstring{$\sim$\+Block\+Printer()}{~BlockPrinter()}}
+{\footnotesize\ttfamily bulk\+::\+Block\+Printer\+::$\sim$\+Block\+Printer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbulk_1_1BlockPrinter_ad0e918167006db76007fb2520ef3d228}\label{classbulk_1_1BlockPrinter_ad0e918167006db76007fb2520ef3d228}} 
+\index{bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}!create@{create}}
+\index{create@{create}!bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1BlockPrinter}{bulk\+::\+Block\+Printer} $>$ bulk\+::\+Block\+Printer\+::create (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an instance of \hyperlink{classbulk_1_1BlockPrinter}{Block\+Printer} 
+\begin{DoxyParams}{Parameters}
+{\em stream} & Stream to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of \hyperlink{classbulk_1_1BlockPrinter}{Block\+Printer} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbulk_1_1BlockPrinter_a9f961b39d2c0bf9112524bf6773bb3e1}\label{classbulk_1_1BlockPrinter_a9f961b39d2c0bf9112524bf6773bb3e1}} 
+\index{bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}!update@{update}}
+\index{update@{update}!bulk\+::\+Block\+Printer@{bulk\+::\+Block\+Printer}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void bulk\+::\+Block\+Printer\+::update (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process (print) a block, function from \hyperlink{classbulk_1_1Observer}{Observer} 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classbulk_1_1Observer_af17104660bf8b287e467213c4efbee2e}{bulk\+::\+Observer$<$ std\+::vector$<$ std\+::string $>$ $>$}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{block__printer_8hpp}{block\+\_\+printer.\+hpp}\item 
+src/\hyperlink{block__printer_8cpp}{block\+\_\+printer.\+cpp}\end{DoxyCompactItemize}

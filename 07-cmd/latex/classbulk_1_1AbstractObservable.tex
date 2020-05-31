@@ -1,0 +1,81 @@
+\hypertarget{classbulk_1_1AbstractObservable}{}\section{bulk\+:\+:Abstract\+Observable$<$ T $>$ Class Template Reference}
+\label{classbulk_1_1AbstractObservable}\index{bulk\+::\+Abstract\+Observable$<$ T $>$@{bulk\+::\+Abstract\+Observable$<$ T $>$}}
+
+
+{\ttfamily \#include $<$observable.\+hpp$>$}
+
+Inheritance diagram for bulk\+:\+:Abstract\+Observable$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbulk_1_1AbstractObservable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbulk_1_1AbstractObservable_a8fe881a61345c8df0c201a2e266605ef}{$\sim$\+Abstract\+Observable} () override=default
+\item 
+void \hyperlink{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}{add\+\_\+subscriber} (const std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1Observer}{Observer}$<$ T $>$$>$ \&observer) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbulk_1_1AbstractObservable_a95ccf77b0c8774129fd1d2b25642356e}{emit} (const T \&data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bulk\+::\+Abstract\+Observable$<$ T $>$}
+
+Abstract implementation of \hyperlink{classbulk_1_1Observable}{Observable} that stores forward\+\_\+list of weak pointers to Observers 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \hyperlink{classbulk_1_1Observable}{Observable} data type \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbulk_1_1AbstractObservable_a8fe881a61345c8df0c201a2e266605ef}\label{classbulk_1_1AbstractObservable_a8fe881a61345c8df0c201a2e266605ef}} 
+\index{bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}!````~Abstract\+Observable@{$\sim$\+Abstract\+Observable}}
+\index{````~Abstract\+Observable@{$\sim$\+Abstract\+Observable}!bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Observable()}{~AbstractObservable()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classbulk_1_1AbstractObservable}{bulk\+::\+Abstract\+Observable}$<$ T $>$\+::$\sim$\hyperlink{classbulk_1_1AbstractObservable}{Abstract\+Observable} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}\label{classbulk_1_1AbstractObservable_a39be332eeed3b432a461faae184ba34b}} 
+\index{bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}!add\+\_\+subscriber@{add\+\_\+subscriber}}
+\index{add\+\_\+subscriber@{add\+\_\+subscriber}!bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}}
+\subsubsection{\texorpdfstring{add\+\_\+subscriber()}{add\_subscriber()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classbulk_1_1AbstractObservable}{bulk\+::\+Abstract\+Observable}$<$ T $>$\+::add\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{classbulk_1_1Observer}{Observer}$<$ T $>$$>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Adds a subscriber (observer) to the list 
+\begin{DoxyParams}{Parameters}
+{\em observer} & \hyperlink{classbulk_1_1Observer}{Observer} to be added \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classbulk_1_1Observable_a1d014ef91398bff19bf96d9ef6bd5e10}{bulk\+::\+Observable$<$ T $>$}.
+
+\mbox{\Hypertarget{classbulk_1_1AbstractObservable_a95ccf77b0c8774129fd1d2b25642356e}\label{classbulk_1_1AbstractObservable_a95ccf77b0c8774129fd1d2b25642356e}} 
+\index{bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}!emit@{emit}}
+\index{emit@{emit}!bulk\+::\+Abstract\+Observable@{bulk\+::\+Abstract\+Observable}}
+\subsubsection{\texorpdfstring{emit()}{emit()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classbulk_1_1AbstractObservable}{bulk\+::\+Abstract\+Observable}$<$ T $>$\+::emit (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Emit data, notifying each observer 
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be emitted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{observable_8hpp}{observable.\+hpp}\end{DoxyCompactItemize}
