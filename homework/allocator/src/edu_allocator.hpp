@@ -23,12 +23,12 @@ public:
 	{
 		auto adjusted_count = n % batch_count ? batch_count * (n / batch_count + 1) : n;
 
-		return reinterpret_cast<pointer>(malloc(adjusted_count * sizeof(T)));
+		return reinterpret_cast<pointer>(std::malloc(adjusted_count * sizeof(T)));
 	}
 
 	void deallocate(pointer p, size_type n)
 	{
-		free(p);
+		std::free(p);
 	}
 
 	template<class U>
