@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['make_5fkey',['make_key',['../structmatrix_1_1detail_1_1indexer_3_01matrix_00_01dimension_00_01index__type_00_01key__type_00_01value__type_00_010_01_4.html#abb061b65dba3dca0184fc9087ad60a34',1,'matrix::detail::indexer&lt; matrix, dimension, index_type, key_type, value_type, 0 &gt;']]]
+  ['indexer',['indexer',['../structmatrix_1_1detail_1_1indexer.html#aa76a16eaa999aa0aa653873c85829fc6',1,'matrix::detail::indexer::indexer()'],['../structmatrix_1_1detail_1_1indexer_3_01matrix_00_01dimension_00_01index__type_00_01key__type_00_01value__type_00_010_01_4.html#a92fff7aee8b6fcb621f389ee5c97e2c7',1,'matrix::detail::indexer&lt; matrix, dimension, index_type, key_type, value_type, 0 &gt;::indexer()']]],
+  ['iterator',['iterator',['../structmatrix_1_1detail_1_1iterator.html#abc18ba67ad8dd8b79ae121c515796448',1,'matrix::detail::iterator']]]
 ];

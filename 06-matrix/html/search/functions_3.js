@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hash_5fcombine',['hash_combine',['../structmatrix_1_1matrix_1_1hash.html#aedb1bc46b25632979d0f65514a36c6d7',1,'matrix::matrix::hash']]]
+  ['get',['get',['../structmatrix_1_1matrix.html#a312aeb3131a45703593dd29558dc54da',1,'matrix::matrix']]]
 ];

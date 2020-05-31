@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['index_5ftype',['index_type',['../structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06',1,'matrix::matrix']]],
-  ['iterator_5fvalue_5ftype',['iterator_value_type',['../structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65',1,'matrix::matrix']]]
+  ['const_5fiterator_5ftype',['const_iterator_type',['../structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93',1,'matrix::matrix']]]
 ];

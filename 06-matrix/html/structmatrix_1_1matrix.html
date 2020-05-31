@@ -81,8 +81,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix_1_1hash.html">hash</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix_1_1iterator.html">iterator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -100,6 +98,12 @@ Public Types</h2></td></tr>
 <tr class="separator:a435a771dfb8b36e4cbc5ec09cf391796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a718c745a811e13b64ba21239288666a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a718c745a811e13b64ba21239288666a6">map_iterator_type</a> = typename map_type::iterator</td></tr>
 <tr class="separator:a718c745a811e13b64ba21239288666a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4e1501743e5c63f4dff2e0ae27cf89"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a8d4e1501743e5c63f4dff2e0ae27cf89">map_const_iterator_type</a> = typename map_type::const_iterator</td></tr>
+<tr class="separator:a8d4e1501743e5c63f4dff2e0ae27cf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eef2feb50cdf62ced121fb74d3bc67"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a> = <a class="el" href="structmatrix_1_1detail_1_1iterator.html">detail::iterator</a>&lt; <a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a718c745a811e13b64ba21239288666a6">map_iterator_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65">iterator_value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a> &gt;</td></tr>
+<tr class="separator:a82eef2feb50cdf62ced121fb74d3bc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22035dd29cc89014fbb33fd37bfeac93"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a> = <a class="el" href="structmatrix_1_1detail_1_1iterator.html">detail::iterator</a>&lt; <a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a8d4e1501743e5c63f4dff2e0ae27cf89">map_const_iterator_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65">iterator_value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a> &gt;</td></tr>
+<tr class="separator:a22035dd29cc89014fbb33fd37bfeac93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,16 +111,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56f1554d0f871ac5e2b3dac89d26113e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06d5b697d7f64430305967f4adc80633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1detail_1_1indexer.html">detail::indexer</a>&lt; <a class="el" href="structmatrix_1_1matrix.html">matrix</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>, <a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>, <a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a> - 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a06d5b697d7f64430305967f4adc80633">operator[]</a> (<a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a> i)</td></tr>
 <tr class="separator:a06d5b697d7f64430305967f4adc80633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ed849b55f74a145d2c5e3a3ba80431"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1detail_1_1const__indexer.html">detail::const_indexer</a>&lt; <a class="el" href="structmatrix_1_1matrix.html">matrix</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>, <a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>, <a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a> - 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a05ed849b55f74a145d2c5e3a3ba80431">operator[]</a> (<a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a> i) const</td></tr>
+<tr class="separator:a05ed849b55f74a145d2c5e3a3ba80431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312aeb3131a45703593dd29558dc54da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a312aeb3131a45703593dd29558dc54da">get</a> (<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a> key) const</td></tr>
 <tr class="separator:a312aeb3131a45703593dd29558dc54da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0384fc656feed77a2c71c2ed0065d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#aec0384fc656feed77a2c71c2ed0065d8">set</a> (<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a> key, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a> value)</td></tr>
 <tr class="separator:aec0384fc656feed77a2c71c2ed0065d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac15f926245fe20e9dfee3f0695299550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#ac15f926245fe20e9dfee3f0695299550">remove</a> (<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a> key)</td></tr>
 <tr class="separator:ac15f926245fe20e9dfee3f0695299550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b7a440d3593bf1bcd0719fa76128064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a3b7a440d3593bf1bcd0719fa76128064">begin</a> ()</td></tr>
-<tr class="separator:a3b7a440d3593bf1bcd0719fa76128064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf9448267d3ebbe15bb606b68440952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a8cf9448267d3ebbe15bb606b68440952">end</a> ()</td></tr>
-<tr class="separator:a8cf9448267d3ebbe15bb606b68440952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1409af506e9c9fd589cf5d3f586fad4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a1409af506e9c9fd589cf5d3f586fad4d">begin</a> ()</td></tr>
+<tr class="separator:a1409af506e9c9fd589cf5d3f586fad4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a19b8753df3bc95f0955e85be430bb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a8a19b8753df3bc95f0955e85be430bb5">end</a> ()</td></tr>
+<tr class="separator:a8a19b8753df3bc95f0955e85be430bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864ff04f4b3590b5411746ab576c53e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#a864ff04f4b3590b5411746ab576c53e1">begin</a> () const</td></tr>
+<tr class="separator:a864ff04f4b3590b5411746ab576c53e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fae4edfc6c0cd8d0b0fa2c164bb0f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix_1_1matrix.html#ab1fae4edfc6c0cd8d0b0fa2c164bb0f4">end</a> () const</td></tr>
+<tr class="separator:ab1fae4edfc6c0cd8d0b0fa2c164bb0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -138,6 +148,22 @@ struct matrix::matrix&lt; T, Default, N &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a22035dd29cc89014fbb33fd37bfeac93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22035dd29cc89014fbb33fd37bfeac93">&#9670;&nbsp;</a></span>const_iterator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::<a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a> =  <a class="el" href="structmatrix_1_1detail_1_1iterator.html">detail::iterator</a>&lt;<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a8d4e1501743e5c63f4dff2e0ae27cf89">map_const_iterator_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65">iterator_value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a87b61e7f35dcd5991cd3f243cfeced06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87b61e7f35dcd5991cd3f243cfeced06">&#9670;&nbsp;</a></span>index_type</h2>
 
@@ -148,6 +174,22 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::<a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a> =  size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82eef2feb50cdf62ced121fb74d3bc67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eef2feb50cdf62ced121fb74d3bc67">&#9670;&nbsp;</a></span>iterator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::<a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a> =  <a class="el" href="structmatrix_1_1detail_1_1iterator.html">detail::iterator</a>&lt;<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a718c745a811e13b64ba21239288666a6">map_iterator_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a1de5c69f5d9e3b6d3e54b1e4cb433d65">iterator_value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -180,6 +222,22 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::<a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a> =  typename <a class="el" href="classmatrix_1_1detail_1_1generate__matrix__key__type.html">detail::generate_matrix_key_type</a>&lt;<a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d4e1501743e5c63f4dff2e0ae27cf89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4e1501743e5c63f4dff2e0ae27cf89">&#9670;&nbsp;</a></span>map_const_iterator_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::<a class="el" href="structmatrix_1_1matrix.html#a8d4e1501743e5c63f4dff2e0ae27cf89">map_const_iterator_type</a> =  typename map_type::const_iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -251,8 +309,8 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3b7a440d3593bf1bcd0719fa76128064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b7a440d3593bf1bcd0719fa76128064">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="a1409af506e9c9fd589cf5d3f586fad4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1409af506e9c9fd589cf5d3f586fad4d">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +321,7 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmatrix_1_1matrix_1_1iterator.html">iterator</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::begin </td>
+          <td class="memname"><a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -278,8 +336,8 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
 
 </div>
 </div>
-<a id="a8cf9448267d3ebbe15bb606b68440952"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cf9448267d3ebbe15bb606b68440952">&#9670;&nbsp;</a></span>end()</h2>
+<a id="a864ff04f4b3590b5411746ab576c53e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864ff04f4b3590b5411746ab576c53e1">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,10 +348,64 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmatrix_1_1matrix_1_1iterator.html">iterator</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::end </td>
+          <td class="memname"><a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a19b8753df3bc95f0955e85be430bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a19b8753df3bc95f0955e85be430bb5">&#9670;&nbsp;</a></span>end() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix_1_1matrix.html#a82eef2feb50cdf62ced121fb74d3bc67">iterator_type</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1fae4edfc6c0cd8d0b0fa2c164bb0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1fae4edfc6c0cd8d0b0fa2c164bb0f4">&#9670;&nbsp;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix_1_1matrix.html#a22035dd29cc89014fbb33fd37bfeac93">const_iterator_type</a> <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -334,7 +446,7 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
 </div>
 </div>
 <a id="a06d5b697d7f64430305967f4adc80633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06d5b697d7f64430305967f4adc80633">&#9670;&nbsp;</a></span>operator[]()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d5b697d7f64430305967f4adc80633">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,6 +462,34 @@ template&lt;typename T , T Default, size_t N = 2&gt; </div>
           <td class="paramtype"><a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05ed849b55f74a145d2c5e3a3ba80431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ed849b55f74a145d2c5e3a3ba80431">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , T Default, size_t N = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmatrix_1_1detail_1_1const__indexer.html">detail::const_indexer</a>&lt;<a class="el" href="structmatrix_1_1matrix.html">matrix</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a>, <a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>, <a class="el" href="structmatrix_1_1matrix.html#af7b5498ac1b615cb9ef51bd185a2557e">key_type</a>, <a class="el" href="structmatrix_1_1matrix.html#ab940e7a84942339cdee7c0f0d3bd8ef9">value_type</a>, <a class="el" href="structmatrix_1_1matrix.html#a7d76bd51fd998974f59ea4035e053f74">dimension</a> - 1&gt; <a class="el" href="structmatrix_1_1matrix.html">matrix::matrix</a>&lt; T, Default, N &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmatrix_1_1matrix.html#a87b61e7f35dcd5991cd3f243cfeced06">index_type</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
