@@ -24,7 +24,11 @@ auto \hyperlink{classedu__container_a7b97b3fa13a5bb3357062687bd408f7b}{begin} ()
 \item 
 auto \hyperlink{classedu__container_aa32c0fa70c685557a5d35fe48a8fa1c2}{end} () const
 \item 
-void \hyperlink{classedu__container_ae82187bdb440b98d824bc6752c940e51}{insert} (\hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type} value)
+void \hyperlink{classedu__container_ac104fcdf3c6c2684e53a05d715327f6f}{insert} (const \hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type} \&value)
+\item 
+void \hyperlink{classedu__container_aa27f03449ca0e27ac7ae7a91b079afff}{insert} (\hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type} \&\&value)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\T \& \hyperlink{classedu__container_a0c79c6d4ab2752c1edee74c591659eec}{emplace} (Args \&\&... args)
 \end{DoxyCompactItemize}
 
 
@@ -77,6 +81,14 @@ using \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\
 {\footnotesize\ttfamily template$<$typename T , size\+\_\+t size, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
 auto \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classedu__container_a0c79c6d4ab2752c1edee74c591659eec}\label{classedu__container_a0c79c6d4ab2752c1edee74c591659eec}} 
+\index{edu\+\_\+container@{edu\+\_\+container}!emplace@{emplace}}
+\index{emplace@{emplace}!edu\+\_\+container@{edu\+\_\+container}}
+\subsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t size, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+template$<$typename... Args$>$ \\
+T\& \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::emplace (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classedu__container_aa32c0fa70c685557a5d35fe48a8fa1c2}\label{classedu__container_aa32c0fa70c685557a5d35fe48a8fa1c2}} 
 \index{edu\+\_\+container@{edu\+\_\+container}!end@{end}}
 \index{end@{end}!edu\+\_\+container@{edu\+\_\+container}}
@@ -84,12 +96,19 @@ auto \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+
 {\footnotesize\ttfamily template$<$typename T , size\+\_\+t size, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
 auto \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classedu__container_ae82187bdb440b98d824bc6752c940e51}\label{classedu__container_ae82187bdb440b98d824bc6752c940e51}} 
+\mbox{\Hypertarget{classedu__container_ac104fcdf3c6c2684e53a05d715327f6f}\label{classedu__container_ac104fcdf3c6c2684e53a05d715327f6f}} 
 \index{edu\+\_\+container@{edu\+\_\+container}!insert@{insert}}
 \index{insert@{insert}!edu\+\_\+container@{edu\+\_\+container}}
-\subsubsection{\texorpdfstring{insert()}{insert()}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , size\+\_\+t size, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
-void \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{const \hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classedu__container_aa27f03449ca0e27ac7ae7a91b079afff}\label{classedu__container_aa27f03449ca0e27ac7ae7a91b079afff}} 
+\index{edu\+\_\+container@{edu\+\_\+container}!insert@{insert}}
+\index{insert@{insert}!edu\+\_\+container@{edu\+\_\+container}}
+\subsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t size, typename Alloc  = std\+::allocator$<$\+T$>$$>$ \\
+void \hyperlink{classedu__container}{edu\+\_\+container}$<$ T, size, Alloc $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classedu__container_a1a1a693013d3f6fd261d6e3532ec2a11}{value\+\_\+type} \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

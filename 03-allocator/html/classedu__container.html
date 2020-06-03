@@ -88,8 +88,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b97b3fa13a5bb3357062687bd408f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32c0fa70c685557a5d35fe48a8fa1c2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedu__container.html#aa32c0fa70c685557a5d35fe48a8fa1c2">end</a> () const</td></tr>
 <tr class="separator:aa32c0fa70c685557a5d35fe48a8fa1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82187bdb440b98d824bc6752c940e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedu__container.html#ae82187bdb440b98d824bc6752c940e51">insert</a> (<a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a> value)</td></tr>
-<tr class="separator:ae82187bdb440b98d824bc6752c940e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac104fcdf3c6c2684e53a05d715327f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedu__container.html#ac104fcdf3c6c2684e53a05d715327f6f">insert</a> (const <a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a> &amp;value)</td></tr>
+<tr class="separator:ac104fcdf3c6c2684e53a05d715327f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27f03449ca0e27ac7ae7a91b079afff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedu__container.html#aa27f03449ca0e27ac7ae7a91b079afff">insert</a> (<a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a> &amp;&amp;value)</td></tr>
+<tr class="separator:aa27f03449ca0e27ac7ae7a91b079afff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c79c6d4ab2752c1edee74c591659eec"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a0c79c6d4ab2752c1edee74c591659eec"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classedu__container.html#a0c79c6d4ab2752c1edee74c591659eec">emplace</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a0c79c6d4ab2752c1edee74c591659eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a20f66877e7a564cb76a3f7d5a5f6ff59"></a>
@@ -223,6 +228,36 @@ template&lt;typename T , size_t size, typename Alloc  = std::allocator&lt;T&gt;&
 
 </div>
 </div>
+<a id="a0c79c6d4ab2752c1edee74c591659eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c79c6d4ab2752c1edee74c591659eec">&#9670;&nbsp;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t size, typename Alloc  = std::allocator&lt;T&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classedu__container.html">edu_container</a>&lt; T, size, Alloc &gt;::emplace </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa32c0fa70c685557a5d35fe48a8fa1c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa32c0fa70c685557a5d35fe48a8fa1c2">&#9670;&nbsp;</a></span>end()</h2>
 
@@ -250,8 +285,8 @@ template&lt;typename T , size_t size, typename Alloc  = std::allocator&lt;T&gt;&
 
 </div>
 </div>
-<a id="ae82187bdb440b98d824bc6752c940e51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae82187bdb440b98d824bc6752c940e51">&#9670;&nbsp;</a></span>insert()</h2>
+<a id="ac104fcdf3c6c2684e53a05d715327f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac104fcdf3c6c2684e53a05d715327f6f">&#9670;&nbsp;</a></span>insert() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +299,35 @@ template&lt;typename T , size_t size, typename Alloc  = std::allocator&lt;T&gt;&
         <tr>
           <td class="memname">void <a class="el" href="classedu__container.html">edu_container</a>&lt; T, size, Alloc &gt;::insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa27f03449ca0e27ac7ae7a91b079afff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27f03449ca0e27ac7ae7a91b079afff">&#9670;&nbsp;</a></span>insert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t size, typename Alloc  = std::allocator&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classedu__container.html">edu_container</a>&lt; T, size, Alloc &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classedu__container.html#a1a1a693013d3f6fd261d6e3532ec2a11">value_type</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
