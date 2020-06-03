@@ -48,8 +48,13 @@ private:
 				required_count % batch_count
 				? (required_count / batch_count) + 1 * batch_count
 				: required_count
-			}, data{ new T[max_count] }
+			}, data{ reinterpret_cast<pointer>(std::malloc(max_count * sizeof(T))) }
 		{
+		}
+
+		inline ~block()
+		{
+			std::free(data);
 		}
 
 		inline bool can_fit(size_t element_count) const
@@ -59,7 +64,7 @@ private:
 
 		inline pointer reserve(size_t element_count)
 		{
-			auto ptr = data.get() + sizeof(value_type) * count;
+			auto ptr = data + sizeof(value_type) * count;
 			count += element_count;
 
 			assert(count <= max_count);
@@ -69,7 +74,7 @@ private:
 
 		size_t count{};
 		const size_t max_count{};
-		std::unique_ptr<value_type[]> data;
+		pointer data;
 	};
 
 	block& get_block_for_alloc(size_t element_count)

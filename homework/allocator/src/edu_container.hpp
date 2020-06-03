@@ -21,6 +21,10 @@ public:
 	}
 	~edu_container()
 	{
+		for (auto i = 0; i < count; ++i)
+		{
+			std::allocator_traits<Alloc>::destroy(allocator, &data[i]);
+		}
 		allocator.deallocate(data, size);
 	}
 
@@ -34,13 +38,26 @@ public:
 		return data + size;
 	}
 
-	void insert(value_type value)
+	void insert(const value_type& value)
+	{
+		emplace(value);
+	}
+
+	void insert(value_type&& value)
+	{
+		emplace(std::move(value));
+	}
+
+	template<typename... Args>
+	T& emplace(Args&& ... args)
 	{
 		if (count == size)
 			throw std::out_of_range("container size exceeded");
 
-		data[count] = value;
+		std::allocator_traits<Alloc>::construct(allocator, &data[count], std::forward<Args>(args)...);
 		count++;
+
+		return data[count - 1];
 	}
 
 private:
