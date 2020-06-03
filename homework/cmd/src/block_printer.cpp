@@ -6,15 +6,15 @@
 
 void bulk::BlockPrinter::update(const std::vector<std::string>& data)
 {
+	if (data.empty())
+		return;
+
 	stream << "bulk: ";
 
-	if (!data.empty())
-	{
-		stream << data.at(0);
+	stream << data.at(0);
 
-		for (auto i = 1; i < data.size(); ++i)
-			stream << ", " << data.at(i);
-	}
+	for (auto i = 1; i < data.size(); ++i)
+		stream << ", " << data.at(i);
 
 	stream << "\n";
 	stream.flush();
