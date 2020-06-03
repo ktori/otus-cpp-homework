@@ -1,0 +1,1 @@
+target_sources(allocator PRIVATE main.cpp edu_container.hpp edu_allocator.hpp)
