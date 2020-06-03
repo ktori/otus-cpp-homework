@@ -1,1 +1,0 @@
-target_sources(print-ip PRIVATE main.cpp print_ip.hpp is_stl_container_like.hpp is_string.hpp is_uniform_tuple.hpp static_for.hpp)
