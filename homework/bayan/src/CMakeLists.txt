@@ -1,0 +1,1 @@
+target_sources(bayan PRIVATE main.cpp)

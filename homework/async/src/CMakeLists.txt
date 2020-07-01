@@ -1,0 +1,1 @@
+target_sources(async PRIVATE main.cpp)

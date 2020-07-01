@@ -1,0 +1,1 @@
+target_sources(bulkmt PRIVATE main.cpp)
