@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/test
           sudo apt-get update
-          sudo apt-get install -y doxygen gcc-10 g++-10
+          sudo apt-get install -y doxygen gcc-10 g++-10 libssl-dev libboost-dev
       - name: Install pip requirements
         run: pip install -r ci/requirements.txt
       - name: Run CI
