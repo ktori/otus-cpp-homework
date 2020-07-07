@@ -1,0 +1,1 @@
+target_sources(bayan PRIVATE hash.hpp hash.cpp md5.hpp md5.cpp)
