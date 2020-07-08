@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(09-bayan VERSION 0.0.1)
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Boost 1.72.0 REQUIRED COMPONENTS filesystem program_options)
+find_package(Boost 1.65.1 REQUIRED COMPONENTS filesystem program_options)
 find_package(OpenSSL REQUIRED)
 
 add_executable(bayan)
